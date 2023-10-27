@@ -13,6 +13,7 @@
 </head>
 
 <body>
+    <?php require_once "navbar.php"; ?>
     <fieldset>
         <form action="cadastrarEscolha.php" method="post" enctype="multipart/form-data">
             <div class="form">
