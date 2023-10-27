@@ -18,7 +18,7 @@
 
     <?php while ($dados1 = mysqli_fetch_assoc($resultadoH)) { ?>
             <div class="historia">
-                <img src="img/personagem-vilao.png" class="personagem-historia" width="400" height="400">
+                <img src="img/<?php echo $dados1['personagem']; ?>" class="personagem-historia" width="400" height="400">
 
                 <div class="balao-historia">
                     <?php echo $dados1['texto']; ?>

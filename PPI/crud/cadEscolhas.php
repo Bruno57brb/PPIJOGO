@@ -15,6 +15,8 @@
         <form action="cadastrarEscolha.php" method="post" enctype="multipart/form-data">
             <div class="form">
                 <strong>Escolha <br><input type="text" name="escolha" required><br>
+
+                <strong>ID <br><input type="text" name="id_historia" required><br>
             </div>
             <br> <br>
             <div class="enviar"><input type="submit" value="Cadastrar"></div>
