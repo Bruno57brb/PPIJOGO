@@ -32,8 +32,8 @@
   while ($dados = mysqli_fetch_assoc($resultado)) {
     echo "<td> " . $dados['id_historia'] . " </td>";
     echo "<td> " . $dados['texto'] . "</td>";
-    echo "<td><a href='../crud/editarH.php?id=" . $dados['id_historia'] . "&texto=" . $dados['texto'] . "'>" . "<img src='../img/settings.png' widht='20' height='20'" . "</a>";
-    echo " <a href='../crud/excluirHistoria.php?id=" . $dados['id_historia'] . "'>" . "<img src='../img/lixeira.png' widht='20' height='20'" . "</a></td>";
+    echo "<td><a href='../crud/editarH.php?id_historia=" . $dados['id_historia'] . "&texto=" . $dados['texto'] . "'>" . "<img src='../img/settings.png' widht='20' height='20'" . "</a>";
+    echo " <a href='../crud/excluirHistoria.php?id_historia=" . $dados['id_historia'] . "'>" . "<img src='../img/lixeira.png' widht='20' height='20'" . "</a></td>";
     echo '</tr>';
   }
   echo '</table>
