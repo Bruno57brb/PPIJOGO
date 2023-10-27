@@ -29,4 +29,4 @@ if (isset($_FILES['cenario']) and (isset($_FILES['personagem']))) {
     else
         echo "Falha ao enviar cenario.";
 }
-header('Location: listar.php');
+header('Location: listarH.php');

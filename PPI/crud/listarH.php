@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Mercadinho</title>
+  <title>PPI</title>
 </head>
 
 <body>
