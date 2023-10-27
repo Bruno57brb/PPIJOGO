@@ -8,7 +8,7 @@
 
 <body>
 
-  <?php
+<?php require_once "navbar.php";
 
   //Conectar ao banco
   include("../conecta.php");
