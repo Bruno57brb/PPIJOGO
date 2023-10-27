@@ -26,7 +26,7 @@ $dados = mysqli_fetch_assoc($resultado);
 
 <body>
     <fieldset>
-        <form action="editar.php" method="POST" enctype="multipart/form-data">
+        <form action="editarEscolhas.php" method="POST" enctype="multipart/form-data">
             <div class="form">
 
                 Escolhas <br><input type="text" name="nome" value="<?php echo $dados['escolha']; ?>" required><br>

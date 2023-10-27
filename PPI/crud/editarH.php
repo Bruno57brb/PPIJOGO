@@ -26,7 +26,7 @@ $dados = mysqli_fetch_assoc($resultado);
 
 <body>
     <fieldset>
-        <form action="editar.php" method="POST" enctype="multipart/form-data">
+        <form action="editarHistoria.php" method="POST" enctype="multipart/form-data">
             <div class="form">
 
                 Historia <br><input type="text" name="nome" value="<?php echo $dados['texto']; ?>" required><br>

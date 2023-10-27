@@ -1,5 +1,5 @@
 <?php
-include("conecta.php");
+include("../conecta.php");
 
 $id = $_GET['id_historia'];
 
@@ -15,4 +15,4 @@ unlink($diretorio . $historia['personagem']);
 $sql = "DELETE FROM historia WHERE id_historia = $id";
 mysqli_query($conexao, $sql);
 
-header('Location: listar.php');
+header('Location: listarH.php');

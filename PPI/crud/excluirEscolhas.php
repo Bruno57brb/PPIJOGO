@@ -1,5 +1,5 @@
 <?php
-include("conecta.php");
+include("../conecta.php");
 
 $id = $_GET['id_escolhas'];
 
@@ -13,4 +13,4 @@ $historia = mysqli_fetch_assoc($resultado);
 $sql = "DELETE FROM escolhas WHERE id_escolhas = $id";
 mysqli_query($conexao, $sql);
 
-header('Location: listar.php');
+header('Location: listarE.php');
