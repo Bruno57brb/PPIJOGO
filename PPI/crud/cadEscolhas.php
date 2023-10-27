@@ -12,7 +12,7 @@
 <body>
     
     <fieldset>
-        <form action="cadastrarEscolha.php" method="post" enctype="multipart/form-data">
+        <form action="cadastrarEscolha.php" method="post">
             <div class="form">
                 <strong>Escolha <br><input type="text" name="escolha" required><br>
 
