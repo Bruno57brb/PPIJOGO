@@ -1,7 +1,7 @@
 <?php
 
-$texto = $_POST['texto'];
-$id = $_POST['id_historia'];
+$texto = $_GET['texto'];
+$id = $_GET['id_historia'];
 
 include("../conecta.php");
 
