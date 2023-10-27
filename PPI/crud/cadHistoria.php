@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
 
-    <title>lorenzo</title>
+    <title>PPI</title>
 </head>
 
 <body>
-    
+    <?php require_once "navbar.php"; ?>
     <fieldset>
-        
+
         <form action="cadastrarHistoria.php" method="post" enctype="multipart/form-data">
             <div class="form">
                 <strong>História <br><input type="text" name="texto" required><br>
@@ -24,4 +24,5 @@
         </form>
     </fieldset>
 </body>
+
 </html>

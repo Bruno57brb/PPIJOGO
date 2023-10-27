@@ -8,12 +8,12 @@
 
    .balao-escolha {
        position: fixed;
-       left: 14%;
-       top: 80%;
+       left: 35%;
+       top: 78%;
        width: 8em;
        margin-top: -2.5em;
        /* Definimos a largura da página */
-       width: 700px;
+       width: 600px;
        /* Definirmos a altura da página*/
        height: 200px;
        /* Aqui definiremos a cor de fundo da página */
@@ -33,8 +33,8 @@
 
    .balao-historia {
        position: fixed;
-       right: 50%;
-       top: 30%;
+       right: 49%;
+       top: 35%;
        width: 8em;
        margin-top: -2.5em;
        /* Definimos a largura da página */
@@ -53,13 +53,13 @@
 
    .fundo-personagem {
        position: fixed;
-       left: 0;
-       top: 59%;
+       left: 26%;
+       top: 65%;
        margin-top: -2.5em;
        border-radius: 100%;
        overflow: hidden;
-       height: 280px;
-       width: 280px;
+       height: 200px;
+       width: 200px;
        background: white;
        position: absolute;
    }
@@ -69,18 +69,21 @@
    }
 
    .personagem-historia {
-       position: absolute;
-       top: 38%;
-       left: 54%;
+       position: fixed;
+       right: 23%;
+       top: 58%;
+       margin-top: -2.5em;
        transform: translate(-50%, -50%);
        font-size: 18px;
    }
 
    .personagem-escolhas {
        position: fixed;
-       left: 7%;
+       left: 31%;
        top: 84%;
        margin-top: -2.5em;
        transform: translate(-50%, -50%);
        font-size: 18px;
+       width: 300px;
+       height: 300px;
    }
