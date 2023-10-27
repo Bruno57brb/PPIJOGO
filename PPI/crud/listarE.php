@@ -3,13 +3,14 @@
 
 <head>
   <meta charset="UTF-8">
+  <link rel="stylesheet" href="./css/navbar.css">
   <title>PPI</title>
 </head>
 
 <body>
 
   <?php
-
+  require_once "navbar.php";
   //Conectar ao banco
   include("../conecta.php");
 
@@ -31,9 +32,9 @@
 
   while ($dados = mysqli_fetch_assoc($resultado)) {
     echo "<td> " . $dados['id_escolhas'] . " </td>";
-    echo "<td> " . $dados['texto'] . "</td>";
-    echo "<td><a href='../crud/editarE.php?id_escolhas=" . $dados['id_escolhas'] . "&escolhas=" . $dados['escolhas'] . "'>" . "<img src='img/settings.png' widht='20' height='20'" . "</a>";
-    echo " <a href='../crud/excluirEscolhas.php?id_escolhas=" . $dados['id_escolhas'] . "'>" . "<img src='img/lixeira.png' widht='20' height='20'" . "</a></td>";
+    echo "<td> " . $dados['escolha'] . "</td>";
+    echo "<td><a href='../crud/editarE.php?id_escolhas=" . $dados['id_escolhas'] . "&escolha=" . $dados['escolha'] . "'>" . "<img src='../img/settings.png' widht='20' height='20'" . "</a>";
+    echo " <a href='../crud/excluirEscolhas.php?id_escolhas=" . $dados['id_escolhas'] . "'>" . "<img src='../img/lixeira.png' widht='20' height='20'" . "</a></td>";
     echo '</tr>';
   }
   echo '</table>

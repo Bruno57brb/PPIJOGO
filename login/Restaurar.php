@@ -56,8 +56,8 @@
             </svg>
           </button>
         </a>
-       <h1> <a href="index.html" class="login__link">login</a></h1>
-        <h1><a href="criar.html" class="login__link">criar conta</a></h1>
+       <h1> <a href="index.php" class="login__link">login</a></h1>
+        <h1><a href="criar.php" class="login__link">criar conta</a></h1>
       </div>
     </div>
   </div>

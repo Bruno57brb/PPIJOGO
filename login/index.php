@@ -48,8 +48,8 @@
            
           </button>
         </a>
-       <h1> <a href="Restaurar.html" class="login__link">restaurar conta</a></h1>
-        <h1><a href="criar.html" class="login__link">criar conta</a></h1>
+       <h1> <a href="Restaurar.php" class="login__link">restaurar conta</a></h1>
+        <h1><a href="criar.php" class="login__link">criar conta</a></h1>
       </div>
     </div>
   </div>
