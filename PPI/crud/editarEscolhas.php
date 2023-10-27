@@ -1,11 +1,11 @@
 <?php
 
-$escolhas = $_POST['escolhas'];
-$id = $_POST['id_escolhas'];
+$escolhas = $_GET['escolhas'];
+$id = $_GET['id_escolhas'];
 
 include("../conecta.php");
 
-    $sql = "UPDATE escolhas SET escolhas = '$escolhas' WHERE id_escolhas = $id";
+    $sql = "UPDATE escolhas SET escolha = '$escolhas' WHERE id_escolhas = $id";
     if (mysqli_query($conexao, $sql))
         echo "cenario enviado com sucesso!";
     else
