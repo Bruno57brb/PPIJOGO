@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="shortcut icon" href="img/carro.png">
-    <title>Mercadinho</title>
+    <title>PPI</title>
 </head>
 
 <body>
