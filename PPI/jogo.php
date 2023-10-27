@@ -9,7 +9,7 @@
     include("conecta.php");
     $sqlH = "SELECT * FROM historia WHERE id_historia=1";
     $resultadoH = mysqli_query($conexao, $sqlH);
-    $sqlE = "SELECT * FROM escolhas";
+    $sqlE = "SELECT * FROM escolhas WHERE id_escolhas=id_historia";
     $resultadoE = mysqli_query($conexao, $sqlE);
     ?>
 </head>
