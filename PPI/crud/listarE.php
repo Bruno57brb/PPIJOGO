@@ -30,7 +30,7 @@
     </tr>';
 
   while ($dados = mysqli_fetch_assoc($resultado)) {
-    echo "<td> " . $dados['idLista'] . " </td>";
+    echo "<td> " . $dados['id_escolhas'] . " </td>";
     echo "<td> " . $dados['texto'] . "</td>";
     echo "<td><a href='editarEscolhas.php?id=" . $dados['id_escolhas'] . "&escolhas=" . $dados['escolhas'] . "'>" . "<img src='img/settings.png' widht='20' height='20'" . "</a>";
     echo " <a href='excluirEscolhas.php?id=" . $dados['id_escolhas'] . "'>" . "<img src='img/lixeira.png' widht='20' height='20'" . "</a></td>";

@@ -12,7 +12,7 @@
     <header>
         <nav>
             <ul class="menu">
-                <li class="home"><a href="index.php">Home</a></li>
+                <li class="home"><a href="../index.php">Home</a></li>
                 <li class="cadastrar-historia"><a href="cadHistoria.php">Cadastrar Historia</a></li>
                 <li class="cadastrar-escolha"><a href="cadEscolhas.php">Cadastrar Escolha</a></li>
                 <li class="listarH"><a href="listarH.php">Historias</a></li>
