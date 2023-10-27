@@ -7,7 +7,7 @@
     <title>PPI</title>
     <?php
     include("conecta.php");
-    $sqlH = "SELECT * FROM historia";
+    $sqlH = "SELECT * FROM historia WHERE id_historia=1";
     $resultadoH = mysqli_query($conexao, $sqlH);
     $sqlE = "SELECT * FROM escolhas";
     $resultadoE = mysqli_query($conexao, $sqlE);

@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="./css/navbar.css">
     <title>PPI</title>
 </head>
-
-<body>
     <?php require_once "navbar.php"; ?>
+<body>
+    
     <fieldset>
         <form action="cadastrarEscolha.php" method="post" enctype="multipart/form-data">
             <div class="form">
