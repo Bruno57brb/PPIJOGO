@@ -3,13 +3,14 @@
 
 <head>
   <meta charset="UTF-8">
+  <link rel="stylesheet" href="./css/navbar.css">
   <title>PPI</title>
 </head>
 
 <body>
 
   <?php
-
+  require_once "navbar.php";
   //Conectar ao banco
   include("../conecta.php");
 
