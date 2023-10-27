@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;500;600;700&display=swap');
+
+body {
+  background: url('images/wallpaper.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Roboto';
+  width: 100vw;
+  max-width: 100vw;
+  min-height: 100vh;
+}
+
+p{
+  color:#FFF;
+}
+
+.content-page {
+  display: flex;
+  flex-direction: row;
+  padding: 0 0vw;
+  width: 100vw;
+  min-width: 100%;
+  max-width: 100%;
+  position: relative;
+  max-width: 100vw;
+}
+
+
+.title {
+  font-size: 48px;
+  font-weight: 600;
+  padding: 15px;
+  color:#FFF;
+}
+
+:root {
+  --white: #FFF;
+  --whitesmoke: #F9F9F9;
+  --light-grey: #ECECEC;
+  --grey: #C4C4C4;
+  --medium-grey: #A7A7A7;
+  --deep-grey: #343434;
+  --black: #000000;
+  --blue: #1B77F3;
+  --red: #CF3C3F;
+}
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.input {
+  width: 100%;
+  background-color: var(--light-grey);
+  border: 2px solid rgba(0, 0, 0, 0);
+  border-radius: 5px;
+  outline: none;
+  font-size: 0.9em;
+  padding: 25px 10px 10px;
+  font-weight: 600;
+  color: var(--deep-grey);
+}
+
+.login__label span {
+  position: absolute;
+  font-size: 0.8em;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--medium-grey);
+  margin: 20px;
+  cursor: text;
+  transition: all 200ms ease;
+}
+
+.login__label .span-active {
+  font-size: 0.7em;
+  margin: 8px 10px;
+}
+
+.login__button {
+  width: 60px;
+  height: 60px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: gray;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 60px;
+  border: 3px solid #ffffff;
+  transition: background .3s;
+  color: inherit;
+  font-size: larger
+  
+  
+}
+
+.login__button:disabled {
+  cursor: auto;
+  background-color: white;
+  border: 2px solid var(--light-grey);
+}
+
+.login__link {
+  font-size: 0.8em;
+  text-decoration: none;
+  color: var(--medium-grey);
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+
+.game-container {
+display: flex;
+flex-direction: column;
+margin: 0 auto;
+margin-top: 100px;
+}
+
+.body-content{
+  display: flex;
+  flex-direction: row;
+  margin:  0 auto;
+  flex-wrap: wrap-reverse;
+}
