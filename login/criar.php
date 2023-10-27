@@ -8,7 +8,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="criar.css">
   <script src="script.js" defer></script>
 
   <title>CRIAR</title>
@@ -44,9 +44,9 @@
           </label></p>
 
 
-        <div class="card-login">
+          
 
-          <div class="wrapper">
+          
 
             <div class="wrapper">
               <a href="#"> <button type="button" class="login__button" disabled>
@@ -56,8 +56,8 @@
                   </svg>
                 </button>
               </a>
-              <h1> <a href="index.php" class="login__link">login</a></h1>
-              <h1><a href="restaurar.php" class="login__link">restaurar</a></h1>
+              <h1 class="tamanho"> <a href="Restaurar.php" class="login__link">restaurar conta</a>
+              <a href="index.php" class="login__link">login</a></h1>
             </div>
           </div>
         </div>

@@ -94,7 +94,7 @@ p{
   transition: background .3s;
   font-size: larger;
   position: relative;
-  left: 80px;
+  left: 205px;
   
 }
 
@@ -130,7 +130,3 @@ margin-top: 240px;
   flex-wrap: wrap-reverse;
 }
 
-.wrapper{
-  position: relative;
-  left: px;
-}
