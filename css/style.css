@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Mono, monospace;
+}
+
+body {
+  background-image: url('../img/fundo.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.titulo {
+  position: fixed;
+  left: 2%;
+  top: 9%;
+  width: 8em;
+  margin-top: -2.5em;
+  font-size: large;
+  margin: 10px;
+}
+
+h3 {
+  margin-top: 200px;
+  font-style: normal;
+
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+  font-family: Gill Sans, sans-serif;
+  font-style: bold;
+}
+
+.iniciar {
+  position: fixed;
+  right: 5%;
+  top: 30%;
+  width: 8em;
+  margin-top: -2.5em;
+  border: 3px solid #ffffff;
+  padding: 5px 10px 5px 10px;
+  background-color: gray;
+  color: inherit;
+  transition: background .3s;
+  border-radius: 10px;
+  margin-top: 400px;
+  margin-left: 1150px;
+  width: 150px;
+  height: 40px;
+  font-size: larger
+}
+
+.iniciar:hover {
+  background-color: rgb(255, 255, 255);
+}
+
+a:hover {
+  color: black;
+}
+
+.sinopse {
+  position: fixed;
+  left: 2%;
+  top: 70%;
+  width: 8em;
+  margin-top: -2.5em;
+  /* Definimos a largura da página */
+  width: 400px;
+  /* Definirmos a altura da página*/
+  height: 420px;
+  /* Aqui definiremos a posição que a página ocupará na tela, nesse caso estamos definindo que fique centralizado na tela*/
+  /*top : posição de cima */
+  margin-top: -300px;
+  /* left: posição de esquerda*/
+  margin-left: 0;
+  /* bottom : posição de baixo */
+  margin-bottom: 0px;
+  /* Aqui definiremos a cor de fundo da página */
+  background-color: #aaaaaa;
+  /* bordas */
+  border-radius: 6px 6px 6px 6px;
+  border: 2px solid #3b3b3b;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: left;
+  opacity: 0.8;
+  color: #ffffff;
+  padding: 5px;
+}
