@@ -8,9 +8,15 @@
 </head>
 
 <body>
-
+  <style>
+    nav ul .listarE {
+      background: white;
+      border-radius: 5px 5px 5px 5px;
+    }
+  </style>
   <?php
   require_once "navbar.php";
+
   //Conectar ao banco
   include("../conecta.php");
 

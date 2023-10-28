@@ -9,6 +9,12 @@
 
 <body>
     <?php require_once "navbar.php"; ?>
+    <style>
+        nav ul .cadastrar-historia {
+            background: white;
+            border-radius: 5px 5px 5px 5px;
+        }
+    </style>
     <fieldset>
 
         <form action="cadastrarHistoria.php" method="post" enctype="multipart/form-data">

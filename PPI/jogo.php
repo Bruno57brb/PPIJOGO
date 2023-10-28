@@ -20,14 +20,14 @@
 
     <?php while ($dados1 = mysqli_fetch_assoc($resultadoH)) { ?>
         <style>
-                body {
-                    background-image: url('img/<?php echo $dados1['cenario']; ?>');
-                    background-position: center;
-                    background-repeat: no-repeat;
-                    background-attachment: fixed;
-                    background-size: cover;
-                }
-            </style>
+            body {
+                background-image: url('img/<?php echo $dados1['cenario']; ?>');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+            }
+        </style>
         <div class="historia">
             <img src="img/<?php echo $dados1['personagem']; ?>" class="personagem-historia" width="400" height="400">
 

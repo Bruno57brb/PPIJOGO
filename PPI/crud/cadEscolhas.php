@@ -8,15 +8,21 @@
     <link rel="stylesheet" href="./css/navbar.css">
     <title>PPI</title>
 </head>
-    <?php require_once "navbar.php"; ?>
+
 <body>
-    
+    <?php require_once "navbar.php"; ?>
+    <style>
+        nav ul .cadastrar-escolha {
+            background: white;
+            border-radius: 5px 5px 5px 5px;
+        }
+    </style>
     <fieldset>
         <form action="cadastrarEscolha.php" method="post">
             <div class="form">
                 <strong>Escolha <br><input type="text" name="escolha" required><br>
 
-                <strong>ID <br><input type="text" name="id_historia" required><br>
+                    <strong>ID <br><input type="text" name="id_historia" required><br>
             </div>
             <br> <br>
             <div class="enviar"><input type="submit" value="Cadastrar"></div>
