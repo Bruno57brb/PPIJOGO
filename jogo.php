@@ -31,10 +31,10 @@
 
 <body>
 
-    <?php while ($dados1 = mysqli_fetch_assoc($resultadoH)) { ?>
+    <?php while ($dados = mysqli_fetch_assoc(Historia($id))) { ?>
         <style>
             body {
-                background-image: url('img/<?php echo $dados1['cenario']; ?>');
+                background-image: url('img/<?php echo $dados['cenario']; ?>');
                 background-position: center;
                 background-repeat: no-repeat;
                 background-attachment: fixed;
@@ -42,27 +42,27 @@
             }
         </style>
         <div class="historia">
-            <img src="img/<?php echo $dados1['personagem']; ?>" class="personagem-historia" width="400" height="400">
+            <img src="img/<?php echo $dados['personagem']; ?>" class="personagem-historia" width="400" height="400">
 
             <div class="balao-historia">
-                <?php echo $dados1['texto']; ?>
+                <?php echo $dados['texto']; ?>
             </div>
         </div>
     <?php } ?>
-    <?php while ($dados2 = mysqli_fetch_assoc($resultadoE)) { ?>
+    <?php while ($dados = mysqli_fetch_assoc(Escolha($id))) { ?>
         <div class="escolhas">
             <div class="balao-escolha">
                 <p class="texto-escolha">
-                    <?php echo $dados2['escolha']; ?>
-                    <a href="jogo.php?id_historia=">
+                    <?php echo $dados['escolha']; ?>
+                    <a href="jogo.php?id_historia='. $dados['id_historia'] . '">
                 </p>
             </div>
         </div>
 
     <?php } ?>
-    <?php while ($dados3 = mysqli_fetch_assoc($resultadoU)) { ?>
+    <?php while ($dados = mysqli_fetch_assoc(Usuario())) { ?>
         <div class="fundo-personagem">
-            <img src="img/<?php echo $dados3['imagem']; ?>" class="personagem-escolhas" width="400" height="400">
+            <img src="img/<?php echo $dados['imagem']; ?>" class="personagem-escolhas" width="400" height="400">
         </div>
     <?php } ?>
 </body>
