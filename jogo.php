@@ -7,31 +7,33 @@
     <title>PPI</title>
     <?php
     $id = $_GET['id_historia'];
-    function Historia($id){
+    function Historia($id)
+    {
         include("conecta.php");
         $sql = "SELECT * FROM historia WHERE id_historia='$id'";
         $resultado = mysqli_query($conexao, $sql);
+        return (mysqli_fetch_all($resultado, MYSQLI_ASSOC));
     }
-    function Escolha($id){
+    function Escolha($id)
+    {
         include("conecta.php");
         $sql = "SELECT * FROM escolhas WHERE id_escolha='$id'";
         $resultado = mysqli_query($conexao, $sql);
+        return (mysqli_fetch_all($resultado, MYSQLI_NUM));
     }
-    function Usuario(){
+    function Usuario()
+    {
         include("conecta.php");
         $sql = "SELECT * FROM usuario";
         $resultado = mysqli_query($conexao, $sql);
+        return (mysqli_fetch_all($resultado, MYSQLI_ASSOC));
     }
-    
-    
-    
-    
     ?>
 </head>
 
 <body>
 
-    <?php while ($dados = mysqli_fetch_assoc(Historia($id))) { ?>
+    <?php while ($dados = Historia($id)) { ?>
         <style>
             body {
                 background-image: url('img/<?php echo $dados['cenario']; ?>');
@@ -49,7 +51,7 @@
             </div>
         </div>
     <?php } ?>
-    <?php while ($dados = mysqli_fetch_assoc(Escolha($id))) { ?>
+    <?php while ($dados = Escolha($id)) { ?>
         <div class="escolhas">
             <div class="balao-escolha">
                 <p class="texto-escolha">
@@ -60,7 +62,7 @@
         </div>
 
     <?php } ?>
-    <?php while ($dados = mysqli_fetch_assoc(Usuario())) { ?>
+    <?php while ($dados = Usuario()) { ?>
         <div class="fundo-personagem">
             <img src="img/<?php echo $dados['imagem']; ?>" class="personagem-escolhas" width="400" height="400">
         </div>
