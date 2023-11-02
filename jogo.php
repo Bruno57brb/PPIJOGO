@@ -6,13 +6,26 @@
     <link rel="stylesheet" href="./css/cenario.css">
     <title>PPI</title>
     <?php
-    include("conecta.php");
-    $sqlH = "SELECT * FROM historia WHERE id_historia=1";
-    $resultadoH = mysqli_query($conexao, $sqlH);
-    $sqlE = "SELECT * FROM escolhas WHERE id_historia";
-    $resultadoE = mysqli_query($conexao, $sqlE);
-    $sqlU = "SELECT * FROM usuario";
-    $resultadoU = mysqli_query($conexao, $sqlU);
+    $id = $_GET['id_historia'];
+    function Historia($id){
+        include("conecta.php");
+        $sql = "SELECT * FROM historia WHERE id_historia='$id'";
+        $resultado = mysqli_query($conexao, $sql);
+    }
+    function Escolha($id){
+        include("conecta.php");
+        $sql = "SELECT * FROM escolhas WHERE id_escolha='$id'";
+        $resultado = mysqli_query($conexao, $sql);
+    }
+    function Usuario(){
+        include("conecta.php");
+        $sql = "SELECT * FROM usuario";
+        $resultado = mysqli_query($conexao, $sql);
+    }
+    
+    
+    
+    
     ?>
 </head>
 
@@ -41,6 +54,7 @@
             <div class="balao-escolha">
                 <p class="texto-escolha">
                     <?php echo $dados2['escolha']; ?>
+                    <a href="jogo.php?id_historia=">
                 </p>
             </div>
         </div>
