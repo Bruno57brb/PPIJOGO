@@ -17,7 +17,7 @@
     function Escolha($id)
     {
         include("conecta.php");
-        $sql = "SELECT * FROM escolhas WHERE id_escolha='$id'";
+        $sql = "SELECT * FROM escolhas WHERE id_historia='$id'";
         $resultado = mysqli_query($conexao, $sql);
         return (mysqli_fetch_all($resultado, MYSQLI_NUM));
     }
