@@ -53,8 +53,8 @@
         <div class="escolhas">
             <div class="balao-escolha">
                 <p class="texto-escolha">
-                    <?php echo $dados['escolha']; ?>
-                    <a href="jogo.php?id_historia='. $dados['id_historia'] . '">
+                    <?php echo $dados['escolha'];
+                    echo '<a href="jogo.php?id_historia=' . $dados['id_historia'] . '">'; ?>
                 </p>
             </div>
         </div>
