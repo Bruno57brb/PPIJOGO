@@ -6,7 +6,12 @@
     <link rel="stylesheet" href="./css/cenario.css">
     <title>PPI</title>
     <?php
-    $id = $_GET['id_historia'];
+    if(isset($id)){
+    $id = $_GET['id_historia']['id_escolha']['id_destino'];
+    $id = explode(" ", $id);
+    }else{
+        $id = 1;
+    }
     function Historia($id)
     {
         include("conecta.php");
@@ -56,7 +61,7 @@
             <div class="balao-escolha">
                 <p class="texto-escolha">
                     <?php echo $dados['escolha'];
-                    echo '<a href="jogo.php?id_historia=' . $dados['id_historia'] . '">'; ?>
+                    echo '<a href="jogo.php?id_historia=' . $dados['id_historia'] . '&id_escolha=' . $dados['id_escolha'] . '&id_destino=' . $dados['id_destino'] .'">'; ?>
                 </p>
             </div>
         </div>
