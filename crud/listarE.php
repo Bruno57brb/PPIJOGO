@@ -39,10 +39,10 @@
     </tr>';
 
   while ($dados = mysqli_fetch_assoc($resultado)) {
-    echo "<td> " . $dados['id_escolhas'] . " </td>";
+    echo "<td> " . $dados['id_escolha'] . " </td>";
     echo "<td> " . $dados['escolha'] . "</td>";
-    echo "<td><a href='../crud/editarE.php?id_escolhas=" . $dados['id_escolhas'] . "&escolha=" . $dados['escolha'] . "'>" . "<img src='../img/settings.png' widht='20' height='20'" . "</a>";
-    echo " <a href='../crud/excluirEscolhas.php?id_escolhas=" . $dados['id_escolhas'] . "'>" . "<img src='../img/lixeira.png' widht='20' height='20'" . "</a></td>";
+    echo "<td><a href='../crud/editarE.php?id_escolha=" . $dados['id_escolha'] . "&escolha=" . $dados['escolha'] . "'>" . "<img src='../img/settings.png' widht='20' height='20'" . "</a>";
+    echo " <a href='../crud/excluirEscolhas.php?id_escolha=" . $dados['id_escolha'] . "'>" . "<img src='../img/lixeira.png' widht='20' height='20'" . "</a></td>";
     echo '</tr>';
   }
   echo '</table>
