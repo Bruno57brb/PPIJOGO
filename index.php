@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./css/style.css">
-    <title>PPI</title>
+    <link rel="shortcut icon" href="img/EC.png">
+    <title>Enigma Capital</title>
 </head>
 
 <body>
