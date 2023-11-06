@@ -14,6 +14,7 @@
     nav ul .listarH {
       background: white;
       border-radius: 5px 5px 5px 5px;
+      color: black;
     }
   </style>
   <?php require_once "navbar.php";

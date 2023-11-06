@@ -13,6 +13,7 @@
     nav ul .listarE {
       background: white;
       border-radius: 5px 5px 5px 5px;
+      color: black;
     }
   </style>
   <?php

@@ -14,6 +14,7 @@
         nav ul .cadastrar-historia {
             background: white;
             border-radius: 5px 5px 5px 5px;
+            color: black;
         }
     </style>
 
