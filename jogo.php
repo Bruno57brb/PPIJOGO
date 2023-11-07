@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="img/EC.png">
     <title>Enigma Capital</title>
     <?php
-    $id = (isset($_GET['id_historia']) ? $_GET['id_historia'] : 0);
+    $id = (isset($_GET['id_destino']) ? $_GET['id_destino'] : 0);
     function Historia($id)
     {
         include("conecta.php");
@@ -33,7 +33,7 @@
 </head>
 
 <body>
-    <?php $dados = Historia($id) ?>
+    <?php $dados = Historia($id); ?>
     <style>
         body {
             background-image: url('img/<?php echo $dados['cenario']; ?>');
@@ -55,8 +55,7 @@
             <div class="balao-escolha">
                 <p class="texto-escolha">
                     <?php echo $escolha['escolha'];
-                    echo '<a href="jogo.php?id_historia=' . $escolha['id_historia'] . '&id_escolha=' . $escolha['id_escolha'] . '&id_destino=' . $escolha['id_destino'] . '">'; ?>
-                    </a>
+                    echo '<a href="jogo.php?id_destino=' . $escolha['id_destino'] . '"> </a>'; ?>
                 </p>
             </div>
         </div>
