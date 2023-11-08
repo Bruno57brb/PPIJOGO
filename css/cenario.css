@@ -1,10 +1,3 @@
-   body {
-       background-image: url('../img/cenario.png');
-       background-position: center;
-       background-repeat: no-repeat;
-       background-attachment: fixed;
-       background-size: cover;
-   }
 
    .balao-escolha {
        position: fixed;
@@ -27,8 +20,13 @@
    }
 
    .texto-escolha {
-       margin-left: 60px;
-       margin-top: 10px;
+       margin-left: 15%;
+       margin-top: 30px;
+   }
+
+   .texto-escolha a {
+    text-decoration: none;
+    color: black
    }
 
    .balao-historia {

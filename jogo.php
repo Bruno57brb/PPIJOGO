@@ -50,17 +50,16 @@
             <?php echo $dados['texto']; ?>
         </div>
     </div>
-    <?php foreach (Escolha($id) as $escolha): ?>
-        <div class="escolhas">
-            <div class="balao-escolha">
+    <div class="escolhas">
+        <div class="balao-escolha">
+                <?php foreach (Escolha($id) as $escolha): ?>
                 <p class="texto-escolha">
-                    <?php echo $escolha['escolha'];
-                    echo '<a href="jogo.php?id_destino=' . $escolha['id_destino'] . '"> </a>'; ?>
+                    <?php echo '<a href="jogo.php?id_destino=' . $escolha['id_destino'] . '">' . $escolha['escolha']. ' </a>'; ?>
                 </p>
+                <?php endforeach; ?>
             </div>
         </div>
 
-    <?php endforeach; ?>
     <?php $usuario = Usuario() ?>
      <div class="fundo-personagem">
         <img src="img/<?php echo $usuario['imagem']; ?>" class="personagem-escolhas" width="400" height="400">
