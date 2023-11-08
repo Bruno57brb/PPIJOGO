@@ -24,9 +24,11 @@ li a {
     display: flex;
 }
 
-#menu {
+#menu li a{
     line-height: 4.3;
-    padding-left: 50px;
+    padding: 0px 30px;
+    border: 0px solid gray;
+    border-width: 0px 1px;
 }
 
 li a:hover {
