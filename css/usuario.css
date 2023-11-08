@@ -1,0 +1,45 @@
+body{
+    background-color: black;
+}
+.genero-m{
+
+}
+.genero-f{
+
+}
+.iniciar {
+    position: fixed;
+    right: 85%;
+    top: 30%;
+    width: 8em;
+    margin-top: -2.5em;
+    border: 3px solid #ffffff;
+    padding: 5px 10px 5px 10px;
+    background-color: gray;
+    color: inherit;
+    transition: background .3s;
+    border-radius: 10px;
+    margin-top: 400px;
+    margin-left: 1150px;
+    width: 150px;
+    height: 40px;
+    font-size: larger;
+    text-decoration: none;
+  }
+.fundo-1{
+
+}
+.fundo-2{
+
+}
+.nome{
+    position: fixed;
+    background-color: gray;
+    width: 300px;
+    height: 150px;
+    border-radius: 25px 25px 25px 25px;
+    border: #ffffff solid 5px;
+}
+.personagem{
+
+}
