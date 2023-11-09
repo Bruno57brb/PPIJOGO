@@ -15,9 +15,13 @@
     <div class="fundo-1"></div>
     <div class="fundo-2"></div>
     <div class="personagem"></div>
+    
     <div class="nome"><label class="nomes">
-           <h1> Nome:</h1> </label>
+           <h1>Nome:</h1> <input type="text" name="username" class="input">
+        </label>
+         
     </div>
+    
     <button type="button" class="iniciar"><a href="jogo.php">INICIAR</a></button>
 </body>
 

@@ -2,6 +2,14 @@ body{
     background-color: black;
 }
 
+:root {
+    --white: #FFF;
+    --whitesmoke: #F9F9F9;
+    --light-grey: #ECECEC;
+    --grey: #C4C4C4;
+    --medium-grey: #A7A7A7;
+    
+  }
 .genero-f{
     width: 300px;
     height: 150px;
@@ -43,3 +51,40 @@ body{
 .nomes{
     right: 8%;
 }
+.login__button {
+    width: 60px;
+    height: 60px;
+    padding: 20px;
+    align-content: center;
+    background-color: gray;
+    border-radius: 20px;
+    cursor: pointer;
+    border: 3px solid #ffffff;
+    transition: background .3s;
+    font-size: larger;
+    position: relative;
+    left: 80px;
+    
+  }
+  
+  .login__button:disabled {
+    cursor: auto;
+    background-color: white;
+    border: 2px solid var(--light-grey);
+    
+  }
+  .input {
+    width: 80%;
+    height: 0%;
+    background-color: var(--light-grey);
+    border: 2px solid rgba(0, 0, 0, 0);
+    border-radius: 5px;
+    outline: none;
+    font-size: 0.9em;
+    padding: 25px 10px 10px;
+    font-weight: 600;
+    color: var(--deep-grey);
+  }
+  
+  
+  
