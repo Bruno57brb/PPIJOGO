@@ -23,7 +23,9 @@
             <div class="form">
                 <strong>Escolha <br><input type="text" name="escolha" required><br>
 
-                    <strong>ID <br><input type="text" name="id_historia" required><br>
+                    ID História <br><input type="text" name="id_historia" required><br>
+                    ID Destino <br><input type="text" name="id_destino" required><br>
+                    ID Escolha </strong><br><input type="text" name="id_escolha" required><br>
             </div>
             <br> <br>
             <div class="enviar"><input type="submit" value="Cadastrar"></div>

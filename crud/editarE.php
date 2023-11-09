@@ -1,11 +1,11 @@
 <?php
 include("../conecta.php");
 
-$id = $_GET['id_escolhas'];
-$texto = $_GET['escolhas'];
+$id = $_GET['id_escolha'];
+$texto = $_GET['escolha'];
 
 //Seleciona todos os dados da tabela lista
-$sql = "SELECT * FROM escolhas WHERE id_escolhas=$id";
+$sql = "SELECT * FROM escolhas WHERE id_escolha=$id";
 
 //executa o select
 $resultado = mysqli_query($conexao, $sql);
@@ -14,6 +14,8 @@ $dados = mysqli_fetch_assoc($resultado);
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
+<link rel="stylesheet" href="../css/navbar.css">
+<link rel="stylesheet" href="../css/form.css">
 
 <head>
     <meta charset="UTF-8">
@@ -25,18 +27,24 @@ $dados = mysqli_fetch_assoc($resultado);
 </head>
 
 <body>
-    <fieldset>
-        <form action="editarEscolhas.php" method="POST" enctype="multipart/form-data">
-            <div class="form">
+    <?php require_once "navbar.php"; ?>
+    <style>
+        nav ul .cadastrar-escolha {
+            background: white;
+            border-radius: 5px 5px 5px 5px;
+            color: black;
+        }
+    </style>
+    <form action="editarEscolhas.php" method="POST" enctype="multipart/form-data">
+        <div class="form">
 
-                Escolhas <br><input type="text" name="nome" value="<?php echo $dados['escolha']; ?>" required><br>
-                ID <br><input type="text" name="id" value="<?php echo $dados['id_escolhas']; ?>"><br>
+            Escolhas <br><input type="text" name="nome" value="<?php echo $dados['escolha']; ?>" required><br>
+            ID <br><input type="text" name="id" value="<?php echo $dados['id_escolha']; ?>"><br>
 
-            </div>
+        </div>
 
-            <br> <br> <input type="submit" value="Editar">
-        </form>
-    </fieldset>
+        <br> <br> <input type="submit" value="Editar">
+    </form>
 </body>
 
 </html>

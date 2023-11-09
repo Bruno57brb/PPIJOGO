@@ -1,6 +1,7 @@
 form {
     color: black;
     font-weight: bolder;
+    margin: 30px;
   }
   
   .form input {
@@ -10,7 +11,13 @@ form {
     font-weight: bold;
   }
   input[type="submit"]{
-    
+    padding: 5px 15px;
+    font-size: 24px;
+    background-color: #dddddd;
+    border: 1px solid #333;
+    border-radius: 50px;
+    cursor: pointer;
+    color: black;
   }
   input[type="file"]{
     display: none;

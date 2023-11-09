@@ -2,6 +2,7 @@
 
 // Receber os dados do formulário
 $texto = $_POST['texto'];
+$id = $_POST['id_historia'];
 
 // Conectar ao BD
 include("../conecta.php");
@@ -25,7 +26,7 @@ if (isset($_FILES['cenario']) and (isset($_FILES['personagem']))) {
     move_uploaded_file($_FILES['cenario']['tmp_name'], $diretorio . $cenario);
     move_uploaded_file($_FILES['personagem']['tmp_name'], $diretorio . $personagem);
 
-    $sql = "INSERT INTO historia(texto, cenario, personagem) VALUES ('$texto','$cenario', '$personagem')";
+    $sql = "INSERT INTO historia(id_historia, texto, cenario, personagem) VALUES ($id, '$texto' '$cenario', '$personagem')";
     // Executar o comando SQL
     if (mysqli_query($conexao, $sql))
         echo "Arquivo enviado com sucesso!";

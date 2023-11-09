@@ -14,6 +14,8 @@ $dados = mysqli_fetch_assoc($resultado);
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
+<link rel="stylesheet" href="../css/navbar.css">
+<link rel="stylesheet" href="../css/form.css">
 
 <head>
     <meta charset="UTF-8">
@@ -25,21 +27,30 @@ $dados = mysqli_fetch_assoc($resultado);
 </head>
 
 <body>
-    <fieldset>
-        <form action="editarHistoria.php" method="POST" enctype="multipart/form-data">
-            <div class="form">
+    <?php require_once "navbar.php"; ?>
+    <style>
+        nav ul .cadastrar-historia {
+            background: white;
+            border-radius: 5px 5px 5px 5px;
+            color: black;
+        }
+    </style>
+    <form action="editarHistoria.php" method="POST" enctype="multipart/form-data">
+        <div class="form">
 
-                Historia <br><input type="text" name="nome" value="<?php echo $dados['texto']; ?>" required><br>
-                ID <br><input type="text" name="id" value="<?php echo $dados['id_historia']; ?>"><br>
+            Historia <br><input type="text" name="nome" value="<?php echo $dados['texto']; ?>" required><br>
+            ID <br><input type="text" name="id" value="<?php echo $dados['id_historia']; ?>"><br>
 
-            </div>
+        </div>
+        Cenario</strong>
+        <br><label for="cenario">Enviar Cenário</label><input type="file" name="cenario" id="cenario" required><br>
 
-            Cenario <br><input type="file" name="cenario" required><br>
-            Personagem <br><input type="file" name="personagem" required><br>
+        <strong>Personagem</strong>
+        <br><label for="personagem">Enviar Personagem</label><input type="file" name="personagem" id="personagem"
+            required><br>
 
-            <br> <br> <input type="submit" value="Editar">
-        </form>
-    </fieldset>
+        <br> <br> <input type="submit" value="Editar">
+    </form>
 </body>
 
 </html>

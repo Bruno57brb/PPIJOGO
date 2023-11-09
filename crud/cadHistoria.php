@@ -22,6 +22,8 @@
         <form action="cadastrarHistoria.php" method="post" enctype="multipart/form-data">
             <div class="form">
                 <strong>História <br><input type="text" name="texto" required><br>
+
+                Id História <br><input type="text" name="id_historia" required><br>
             </div>
             Cenario</strong> 
                 <br><label for="cenario">Enviar Cenário</label><input type="file" name="cenario" id="cenario"required><br>

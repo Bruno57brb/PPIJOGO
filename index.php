@@ -12,7 +12,7 @@
     <label class="titulo"><img src="img/Enigma" width="350px" height="350px"></label><br>
     <button type="button" class="iniciar"><a href="jogo.php">INICIAR</a></button>
     <button type="button" class="crud"><a href="./crud/cadHistoria.php">CRUD</a></button>
-    
+    <label class="autores">Autores:<br><br>Antonio Mongelo<br>Bruno Bittencourt<br>Laura Oliveira<br>Lorenzo Marty<br></label>
 </body>
 
 </html>
