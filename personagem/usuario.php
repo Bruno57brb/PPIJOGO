@@ -13,25 +13,21 @@
 <body>
     <div class="fundo-1"></div>
     <div class="fundo-2"></div>
-    <div class="personagem"></div>
+
 
     <div class="nome"><label class="nomes">
            <h1>Nome:</h1> <input type="text" name="username" class="input">
         </label>
          
     </div>
-
+<div class="fundo"></div>
     <div class="genero-f">
-    <ul>
-                <li>
-                    <img src="../img/personagem-fem.png" alt="mulher" onclick="img01();">
-                </li>
-                <li>
-                    <img src="img/personagem-fem.png" alt="cor azul" onclick="img02();">
-                </li>   
-                
-            </ul>
+
+    <img src="../img/personagem-fem.png" width="250px" height="250px">
+            
 </div>
+
+
 
     <button type="button" class="iniciar"><a href="jogo.php">INICIAR</a></button>
 </body>
