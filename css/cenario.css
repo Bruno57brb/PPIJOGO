@@ -1,91 +1,118 @@
+*{
+    font-family: cursive;
+}
+.balao-escolha {
+    position: fixed;
+    left: 35%;
+    top: 81%;
+    width: 8em;
+    margin-top: -2.5em;
+    /* Definimos a largura da página */
+    width: 600px;
+    /* Definirmos a altura da página*/
+    height: 200px;
+    /* Aqui definiremos a cor de fundo da página */
+    background-color: #ffffff;
+    /* bordas */
+    border-radius: 5px 5px 5px 5px;
+    border: 1px solid #52626a;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: left;
+    opacity: 0.8;
+}
 
-   .balao-escolha {
-       position: fixed;
-       left: 35%;
-       top: 81%;
-       width: 8em;
-       margin-top: -2.5em;
-       /* Definimos a largura da página */
-       width: 600px;
-       /* Definirmos a altura da página*/
-       height: 200px;
-       /* Aqui definiremos a cor de fundo da página */
-       background-color: #ffffff;
-       /* bordas */
-       border-radius: 5px 5px 5px 5px;
-       border: 1px solid #52626a;
-       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-       text-align: left;
-       opacity: 0.8;
-   }
+.texto-escolha {
+    margin-left: 15%;
+    margin-top: 15px;
+}
 
-   .texto-escolha {
-       margin-left: 15%;
-       margin-top: 25px;
-   }
-
-   .texto-escolha a {
+.texto-escolha a {
     text-decoration: none;
     color: black
-   }
-   .texto-escolha a:hover{
+}
+
+.texto-escolha a:hover {
     background-color: #a7a7a7;
-   }
+}
 
-   .balao-historia {
-       position: fixed;
-       right: 49%;
-       top: 40%;
-       /* Definimos a largura da página */
-       width: 400px;
-       /* Definirmos a altura da página*/
-       height: 130px;
-       /* Aqui definiremos a cor de fundo da página */
-       background-color: #ffffff;
-       /* bordas */
-       border-radius: 15px;
-       border: 1px solid #52626a;
-       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-       opacity: 0.8;
-   }
-   
-   .balao-historia p{
+.balao-historia {
+    position: fixed;
+    right: 49%;
+    top: 40%;
+    /* Definimos a largura da página */
+    width: 400px;
+    /* Definirmos a altura da página*/
+    height: 130px;
+    /* Aqui definiremos a cor de fundo da página */
+    background-color: #ffffff;
+    /* bordas */
+    border-radius: 15px;
+    border: 1px solid #52626a;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    opacity: 0.8;
+}
+
+.balao-historia p {
     margin-top: 15px;
-    margin-left: 5%; 
-   }
-   .fundo-personagem {
-       position: fixed;
-       left: 26%;
-       top: 70%;
-       margin-top: -2.5em;
-       border-radius: 100%;
-       overflow: hidden;
-       height: 200px;
-       width: 200px;
-       background: white;
-       position: absolute;
-   }
+    margin-left: 5%;
+}
 
-   .escolhas {
-       display: inline-block;
-   }
+.fundo-personagem {
+    position: fixed;
+    left: 26%;
+    top: 70%;
+    margin-top: -2.5em;
+    border-radius: 100%;
+    overflow: hidden;
+    height: 200px;
+    width: 200px;
+    background: white;
+    position: absolute;
+}
 
-   .personagem-historia {
-       position: fixed;
-       right: 25%;
-       top: 60%;
-       margin-top: -2.5em;
-       transform: translate(-50%, -50%);
-       font-size: 18px;
-   }
+.escolhas {
+    display: inline-block;
+}
 
-   .personagem-escolhas {
-       position: fixed;
-       left: 31%;
-       top: 89%;
-       margin-top: -2.5em;
-       transform: translate(-50%, -50%);
-       font-size: 18px;
-       width: 300px;
-       height: 300px;
-   }
+.personagem-historia {
+    position: fixed;
+    right: 25%;
+    top: 61%;
+    margin-top: -2.5em;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+}
+
+.personagem-escolhas {
+    position: fixed;
+    left: 31%;
+    top: 89%;
+    margin-top: -2.5em;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    width: 300px;
+    height: 300px;
+}
+
+.nome-usuario {
+    position: fixed;
+    left: 35%;
+    top: 72%;
+    /* Definimos a largura da página */
+    width: 130px;
+    /* Definirmos a altura da página*/
+    height: 50px;
+    /* Aqui definiremos a cor de fundo da página */
+    background-color: #ffffff;
+    /* bordas */
+    border-radius: 5px 5px 5px 5px;
+    border: 1px solid #52626a;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: left;
+    opacity: 0.8;
+}
+.nome-usuario p{
+    margin-left: 35px;
+    margin-top: 12px;
+    font-size: large;
+}
