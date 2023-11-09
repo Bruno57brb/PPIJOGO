@@ -63,6 +63,7 @@ a {
 a:hover {
   color: black;
 }
+
 .crud {
   position: fixed;
   right: 95%;
@@ -79,8 +80,9 @@ a:hover {
   margin-left: 1150px;
   width: 80px;
   height: 40px;
-  font-size:medium
+  font-size: medium
 }
+
 .sinopse {
   position: fixed;
   left: 2%;
@@ -108,4 +110,12 @@ a:hover {
   opacity: 0.8;
   color: #ffffff;
   padding: 5px;
+}
+.autores{
+  color: #fff;
+  font-size: large;
+  position: fixed;
+  top: 70%;
+  right: 5%;
+  line-height: 35px;
 }

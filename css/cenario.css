@@ -2,7 +2,7 @@
    .balao-escolha {
        position: fixed;
        left: 35%;
-       top: 78%;
+       top: 81%;
        width: 8em;
        margin-top: -2.5em;
        /* Definimos a largura da página */
@@ -21,38 +21,42 @@
 
    .texto-escolha {
        margin-left: 15%;
-       margin-top: 30px;
+       margin-top: 25px;
    }
 
    .texto-escolha a {
     text-decoration: none;
     color: black
    }
+   .texto-escolha a:hover{
+    background-color: #a7a7a7;
+   }
 
    .balao-historia {
        position: fixed;
        right: 49%;
-       top: 35%;
-       width: 8em;
-       margin-top: -2.5em;
+       top: 40%;
        /* Definimos a largura da página */
        width: 400px;
        /* Definirmos a altura da página*/
-       height: 200px;
+       height: 130px;
        /* Aqui definiremos a cor de fundo da página */
        background-color: #ffffff;
        /* bordas */
-       border-radius: 5px 5px 5px 5px;
+       border-radius: 15px;
        border: 1px solid #52626a;
        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-       text-align: left;
        opacity: 0.8;
    }
-
+   
+   .balao-historia p{
+    margin-top: 15px;
+    margin-left: 5%; 
+   }
    .fundo-personagem {
        position: fixed;
        left: 26%;
-       top: 65%;
+       top: 70%;
        margin-top: -2.5em;
        border-radius: 100%;
        overflow: hidden;
@@ -68,8 +72,8 @@
 
    .personagem-historia {
        position: fixed;
-       right: 23%;
-       top: 58%;
+       right: 25%;
+       top: 60%;
        margin-top: -2.5em;
        transform: translate(-50%, -50%);
        font-size: 18px;
@@ -78,7 +82,7 @@
    .personagem-escolhas {
        position: fixed;
        left: 31%;
-       top: 84%;
+       top: 89%;
        margin-top: -2.5em;
        transform: translate(-50%, -50%);
        font-size: 18px;

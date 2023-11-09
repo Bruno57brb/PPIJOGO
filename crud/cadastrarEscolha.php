@@ -2,17 +2,19 @@
 
 // Receber os dados do formulário
 $escolha = $_POST['escolha'];
-$id = $_POST['id_historia'];
+$idH = $_POST['id_historia'];
+$idE = $_POST['id_escolha'];
+$idD = $_POST['id_destino'];
 
 // Conectar ao BD
 include("../conecta.php");
 
 // Montar o comando SQL
-$sql = "INSERT INTO escolhas(escolha, id_historia) VALUES ('$escolha', $id)";
+$sql = "INSERT INTO escolhas(escolha, id_historia, id_escolha, id_destino) VALUES ('$escolha', $idH, $idE, $idD)";
 // Executar o comando SQL
 if (mysqli_query($conexao, $sql)) {
     echo "Arquivo enviado com sucesso!";
-    header('Location: ../index.php');
 } else {
     echo "Falha ao enviar arquivo.";
 }
+header('Location: ../index.php');
