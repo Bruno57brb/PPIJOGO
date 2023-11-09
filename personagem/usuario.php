@@ -10,13 +10,13 @@
 </head>
 
 <body>
-    <div class="genero-m"><img src="genero-m.png"></div>
-    <div class="genero-f"><img src="genero-f.png"></div>
+    <div class="genero-m"><img src=""></div>
+    <div class="genero-f"><img src="../img/personagem-fem.png"></div>
     <div class="fundo-1"></div>
     <div class="fundo-2"></div>
     <div class="personagem"></div>
-    <div class="nome"><label class="nome:">
-            Nome: </label>
+    <div class="nome"><label class="nomes">
+           <h1> Nome:</h1> </label>
     </div>
     <button type="button" class="iniciar"><a href="jogo.php">INICIAR</a></button>
 </body>
