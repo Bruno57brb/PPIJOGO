@@ -68,10 +68,10 @@
         <p>
             <?php echo $usuario['nome']; ?>
         </p>
-    </div>
-    <div class="fundo-personagem">
-        <img src="img/<?php echo $usuario['imagem']; ?>" class="personagem-escolhas" width="400" height="400">
-    </div>
+        </div>
+        <div class="fundo-personagem">
+            <img src="img/<?php echo $usuario['imagem']; ?>" class="personagem-escolhas" width="400" height="400">
+        </div>
 </body>
 
 </html>
