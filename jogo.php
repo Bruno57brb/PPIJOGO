@@ -45,11 +45,17 @@
         }
     </style>
     <div class="historia">
-        <img src="img/<?php echo $dados['personagem']; ?>" class="personagem-historia" width="400" height="400">
+    <?php if($dados['personagem'] == ""){
 
+    }else{ ?>
+        <img src="img/<?php echo $dados['personagem']; ?>" class="personagem-historia" width="400" height="400"> <?php } ?>
+
+<?php if($dados['texto'] == ""){
+
+}else { ?>
         <div class="balao-historia">
             <p class="texto-dinamico-historia">
-                <?php echo $dados['texto']; ?>
+                <?php echo $dados['texto']; }?>
             </p>
         </div>
     </div>
