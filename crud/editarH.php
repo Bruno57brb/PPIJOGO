@@ -38,16 +38,15 @@ $dados = mysqli_fetch_assoc($resultado);
     <form action="editarHistoria.php" method="POST" enctype="multipart/form-data">
         <div class="form">
 
-            Historia <br><input type="text" name="nome" value="<?php echo $dados['texto']; ?>" required><br>
-            ID <br><input type="text" name="id" value="<?php echo $dados['id_historia']; ?>"><br>
+            Historia <br><textarea name="texto" rows="5" cols="30" required><?php echo $dados['texto']; ?></textarea><br>
+            ID <br><input type="text" name="id_historia" value="<?php echo $dados['id_historia']; ?>"><br>
 
         </div>
         Cenario</strong>
-        <br><label for="cenario">Enviar Cenário</label><input type="file" name="cenario" id="cenario" required><br>
+        <br><label for="cenario">Enviar Cenário</label><input type="file" name="cenario" id="cenario"><br>
 
         <strong>Personagem</strong>
-        <br><label for="personagem">Enviar Personagem</label><input type="file" name="personagem" id="personagem"
-            required><br>
+        <br><label for="personagem">Enviar Personagem</label><input type="file" name="personagem" id="personagem"><br>
 
         <br> <br> <input type="submit" value="Editar">
     </form>

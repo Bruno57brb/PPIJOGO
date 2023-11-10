@@ -38,8 +38,8 @@ $dados = mysqli_fetch_assoc($resultado);
     <form action="editarEscolhas.php" method="POST" enctype="multipart/form-data">
         <div class="form">
 
-            Escolhas <br><input type="text" name="nome" value="<?php echo $dados['escolha']; ?>" required><br>
-            ID <br><input type="text" name="id" value="<?php echo $dados['id_escolha']; ?>"><br>
+            Escolhas <br><textarea name="escolha" rows="5" cols="30" required><?php echo $dados['escolha']; ?></textarea><br>
+            ID <br><input type="text" name="id_escolha" value="<?php echo $dados['id_escolha']; ?>"><br>
 
         </div>
 

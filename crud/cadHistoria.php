@@ -21,7 +21,7 @@
 
         <form action="cadastrarHistoria.php" method="post" enctype="multipart/form-data">
             <div class="form">
-                <strong>História <br><input type="text" name="texto" required><br>
+                <strong>História <br><textarea name="texto" rows="5" cols="30" required></textarea><br>
 
                 Id História <br><input type="text" name="id_historia" required><br>
             </div>

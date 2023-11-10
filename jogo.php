@@ -48,7 +48,7 @@
         <img src="img/<?php echo $dados['personagem']; ?>" class="personagem-historia" width="400" height="400">
 
         <div class="balao-historia">
-            <p id="texto-dinamico">
+            <p class="texto-dinamico-historia">
                 <?php echo $dados['texto']; ?>
             </p>
         </div>
@@ -57,9 +57,7 @@
         <div class="balao-escolha">
             <?php foreach (Escolha($id) as $escolha): ?>
                 <div class="texto-escolha">
-                    <p id="texto-dinamico">
-                        <?php echo '<a href="jogo.php?id_destino=' . $escolha['id_destino'] . '&id_usuario=' . $escolha['id_usuario'] . '">' . $escolha['escolha'] . ' </a>'; ?>
-                    </p>
+                        <?php echo '<a class="texto-dinamico-escolhas" href="jogo.php?id_destino=' . $escolha['id_destino'] . '&id_usuario=' . $escolha['id_usuario'] . '">' . $escolha['escolha'] . ' </a>'; ?>
                 </div>
             <?php endforeach; ?>
         </div>
@@ -75,6 +73,11 @@
         <img src="img/<?php echo $usuario['imagem']; ?>" class="personagem-escolhas" width="400" height="400">
     </div>
     <script>
+        function variasOpcoes(params) {
+            params.forEach(elemento => {
+                typeWriter(elemento);
+            });
+        }
         function typeWriter(elemento) {
             const textoArray = elemento.innerHTML.split('');
             elemento.innerHTML = '';
@@ -83,8 +86,10 @@
             });
 
         }
-        const texto = document.querySelector('#texto-dinamico');
-        typeWriter(texto);
+        const historia = document.querySelector('.texto-dinamico-historia');
+        typeWriter(historia);
+        const escolhas = document.querySelectorAll('.texto-dinamico-escolhas');
+        variasOpcoes(escolhas);
     </script>
 </body>
 

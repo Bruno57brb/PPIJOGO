@@ -21,7 +21,7 @@
     </style>
         <form action="cadastrarEscolha.php" method="post">
             <div class="form">
-                <strong>Escolha <br><input type="text" name="escolha" required><br>
+                <strong>Escolha <br><textarea name="nome" rows="5" cols="30" required></textarea><br>
                     ID História <br><input type="text" name="id_historia" required><br>
                     ID Destino <br><input type="text" name="id_destino" required><br>
                     ID Escolha </strong><br><input type="text" name="id_escolha" required><br>

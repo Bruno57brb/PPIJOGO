@@ -33,7 +33,9 @@
   <table>
     <tr>
     <strong>
-      <th scope="col">Id</th>
+      <th scope="col">Id Historia</th>
+      <th scope="col">Id Escolha</th>
+      <th scope="col">Id Destino</th>
       <th scope="col">Texto</th>
       <th scope="col">Opções</th>
     </strong>
@@ -41,6 +43,8 @@
 
   while ($dados = mysqli_fetch_assoc($resultado)) {
     echo "<td> " . $dados['id_escolha'] . " </td>";
+    echo "<td>" . $dados['id_escolha'] . " </td>";
+    echo "<td>" . $dados['id_destino'] . " </td>";
     echo "<td> " . $dados['escolha'] . "</td>";
     echo "<td><a href='../crud/editarE.php?id_escolha=" . $dados['id_escolha'] . "&escolha=" . $dados['escolha'] . "'>" . "<img src='../img/settings.png' widht='20' height='20'" . "</a>";
     echo " <a href='../crud/excluirEscolhas.php?id_escolha=" . $dados['id_escolha'] . "'>" . "<img src='../img/lixeira.png' widht='20' height='20'" . "</a></td>";
