@@ -119,3 +119,27 @@ a:hover {
   right: 5%;
   line-height: 35px;
 }
+.texto-dinamico{
+  border-right: 2px solid black;
+  margin: 0 auto;
+  top: 70%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.typing-animation{
+  animation: blinkCursor 500ms infinite normal, typing 5s steps(40) 1s normal;
+}
+@keyframes blinkCursor{
+  from{
+    border-right-color: black;
+  }to{
+    border-right-color: transparent;
+  }
+}
+@keyframes typing{
+  from{
+    width: 0;
+  }to{
+    width: 100%;
+  }
+}

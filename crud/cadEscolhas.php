@@ -22,7 +22,6 @@
         <form action="cadastrarEscolha.php" method="post">
             <div class="form">
                 <strong>Escolha <br><input type="text" name="escolha" required><br>
-
                     ID História <br><input type="text" name="id_historia" required><br>
                     ID Destino <br><input type="text" name="id_destino" required><br>
                     ID Escolha </strong><br><input type="text" name="id_escolha" required><br>
