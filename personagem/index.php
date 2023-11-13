@@ -15,18 +15,28 @@
     <div class="fundo-2"></div>
 
 
-    <div class="nome"><label class="nomes">
-           <h1>Nome:</h1> <input type="text" name="username" class="input">
-        </label>
+    <div class="nome">
+        
+           <h1>Nome:</h1> 
+      
          
     </div>
-<div class="fundo"></div>
+<div class="fundo"> </div>
     <div class="genero-f">
 
-    <img src="../img/personagem-fem.png" width="250px" height="250px">
+    <img src="../img/personagem-fem.png" width="400px" height="400px">
             
 </div>
+<div class="icone_fem"> 
+<img src="../img/icone_femenino.png" width="150px" height="150px">
 
+</div>
+
+
+<div class="icone_mas"> 
+<img src="../img/icone_masculino.png" width="200px" height="140px">
+
+</div>
 
 
     <button type="button" class="iniciar"><a href="jogo.php">INICIAR</a></button>
