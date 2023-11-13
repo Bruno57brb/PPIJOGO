@@ -49,9 +49,11 @@ body{
     border: #ffffff solid 5px;
     right:22%;
     top:27%; 
- 
-
 }
+.nome h1{
+ text-align: center;
+}
+
 
   
   .fundo-2{
@@ -89,8 +91,15 @@ body{
   border-radius: 25px 25px 25px 25px;
   border: #ffffff solid 5px;
   right:80% ;
-  top:22%
-
+  top:22%;
+}
+.icone_mas img{
+  position: fixed;
+  left: 12.5%;
+}
+.icone_fem img{
+  position: fixed;
+  left: 12%;
 }
 .icone_fem  {
   position: fixed;

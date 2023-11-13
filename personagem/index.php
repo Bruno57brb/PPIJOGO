@@ -34,7 +34,7 @@
 
 
 <div class="icone_mas"> 
-<img src="../img/icone_masculino.png" width="200px" height="140px">
+<img src="../img/icone_masculino.png" width="140px" height="140px">
 
 </div>
 
