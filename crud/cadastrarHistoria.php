@@ -33,4 +33,4 @@ if (isset($_FILES['cenario']) and (isset($_FILES['personagem']))) {
     else
         echo "Falha ao enviar arquivo.";
 }
-header('Location: ../index.php');
+header('Location: listarH.php');

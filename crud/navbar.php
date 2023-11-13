@@ -16,8 +16,9 @@
                 <div id="menu">
                     <li class="cadastrar-historia"><a href="cadHistoria.php" class="cadastrar-historia">Cadastrar Historia </a></li>
                     <li class="cadastrar-escolha"><a href="cadEscolhas.php" class="cadastrar-escolha">Cadastrar Escolha </a></li>
-                    <li class="listarH"><a href="listarH.php" class="listarH">Historias </a></li>
+                    <li class="listarH"><a href="listarH.php" class="listarH">Histórias </a></li>
                     <li class="listarE"><a href="listarE.php" class="listarE">Escolhas </a></li>
+                    <li class="listarU"><a href="listarU.php" class="listarU">Usuário </a></li>
                 </div>
             </ul>
         </nav>

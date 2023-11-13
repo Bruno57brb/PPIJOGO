@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./css/cenario.css">
+    <link rel="stylesheet" href="./css/navbar-1.css">
     <link rel="shortcut icon" href="img/EC.png">
     <title>Enigma Capital</title>
     <?php
@@ -34,6 +35,7 @@
 </head>
 
 <body>
+    <?php require_once "navbar.php"; ?>
     <?php $dados = Historia($id); ?>
     <style>
         body {
@@ -45,17 +47,19 @@
         }
     </style>
     <div class="historia">
-    <?php if($dados['personagem'] == ""){
+        <?php if ($dados['personagem'] == "") {
 
-    }else{ ?>
-        <img src="img/<?php echo $dados['personagem']; ?>" class="personagem-historia" width="400" height="400"> <?php } ?>
+        } else { ?>
+            <img src="img/<?php echo $dados['personagem']; ?>" class="personagem-historia" width="400" height="400">
+        <?php } ?>
 
-<?php if($dados['texto'] == ""){
+        <?php if ($dados['texto'] == "") {
 
-}else { ?>
-        <div class="balao-historia">
-            <p class="texto-dinamico-historia">
-                <?php echo $dados['texto']; }?>
+        } else { ?>
+            <div class="balao-historia">
+                <p class="texto-dinamico-historia">
+                    <?php echo $dados['texto'];
+        } ?>
             </p>
         </div>
     </div>
@@ -63,7 +67,7 @@
         <div class="balao-escolha">
             <?php foreach (Escolha($id) as $escolha): ?>
                 <div class="texto-escolha">
-                        <?php echo '<a class="texto-dinamico-escolhas" href="jogo.php?id_destino=' . $escolha['id_destino'] . '&id_usuario=' . $escolha['id_usuario'] . '">' . $escolha['escolha'] . ' </a>'; ?>
+                    <?php echo '<a class="texto-dinamico-escolhas" href="jogo.php?id_destino=' . $escolha['id_destino'] . '&id_usuario=' . $escolha['id_usuario'] . '">' . $escolha['escolha'] . ' </a>'; ?>
                 </div>
             <?php endforeach; ?>
         </div>

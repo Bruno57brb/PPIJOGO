@@ -17,4 +17,4 @@ if (mysqli_query($conexao, $sql)) {
 } else {
     echo "Falha ao enviar arquivo.";
 }
-header('Location: ../index.php');
+header('Location: listarE.php');
