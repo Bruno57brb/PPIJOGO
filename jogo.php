@@ -45,7 +45,18 @@
             background-attachment: fixed;
             background-size: cover;
         }
+
+        #myVideo {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+        }
     </style>
+    <video autoplay muted loop id="myVideo">
+        <source src="<?php echo $dados['video']; ?>" type="video/mp4">
+    </video>
     <div class="historia">
         <?php if ($dados['nome'] == "") {
 
@@ -92,11 +103,6 @@
         <img src="img/<?php echo $usuario['imagem']; ?>" class="personagem-escolhas" width="400" height="400">
     </div>
     <script>
-        function variasOpcoes(params) {
-            params.forEach(elemento => {
-                typeWriter(elemento);
-            });
-        }
         function typeWriter(elemento) {
             const textoArray = elemento.innerHTML.split('');
             elemento.innerHTML = '';
@@ -107,8 +113,18 @@
         }
         const historia = document.querySelector('.texto-dinamico-historia');
         typeWriter(historia);
+
+        function escrever(escolha) {
+            const textoArray = escolha.innerHTML.split('');
+            escolha.innerHTML = '';
+            textoArray.forEach((letra, i) => {
+                setTimeout(() => escolha.innerHTML += letra, 55 * i)
+            });
+
+        }
         const escolhas = document.querySelectorAll('.texto-dinamico-escolhas');
         variasOpcoes(escolhas);
+
     </script>
 </body>
 
