@@ -39,7 +39,9 @@ $dados = mysqli_fetch_assoc($resultado);
         <div class="form">
 
             Escolhas <br><textarea name="escolha" rows="5" cols="30" required><?php echo $dados['escolha']; ?></textarea><br>
-            ID <br><input type="text" name="id_escolha" value="<?php echo $dados['id_escolha']; ?>"><br>
+            ID História<br><input type="text" name="id_escolha" value="<?php echo $dados['id_historia']; ?>"><br>
+            ID Destino<br><input type="text" name="id_escolha" value="<?php echo $dados['id_destino']; ?>"><br>
+            ID Escolha<br><input type="text" name="id_escolha" value="<?php echo $dados['id_escolha']; ?>"><br>
 
         </div>
 

@@ -94,7 +94,7 @@
             textoArray.forEach((letra, i) => {
                 setTimeout(() => elemento.innerHTML += letra, 55 * i)
             });
-
+            
         }
         const historia = document.querySelector('.texto-dinamico-historia');
         typeWriter(historia);

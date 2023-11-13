@@ -42,7 +42,7 @@
     </tr>';
 
   while ($dados = mysqli_fetch_assoc($resultado)) {
-    echo "<td> " . $dados['id_escolha'] . " </td>";
+    echo "<td> " . $dados['id_historia'] . " </td>";
     echo "<td>" . $dados['id_escolha'] . " </td>";
     echo "<td>" . $dados['id_destino'] . " </td>";
     echo "<td> " . $dados['escolha'] . "</td>";
