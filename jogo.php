@@ -47,6 +47,15 @@
         }
     </style>
     <div class="historia">
+        <?php if ($dados['nome'] == "") {
+
+        } else { ?>
+            <div class="nome-historia">
+                <p>
+                    <?php echo $dados['nome']; ?>
+                </p>
+            </div>
+        <?php } ?>
         <?php if ($dados['personagem'] == "") {
 
         } else { ?>
@@ -94,7 +103,7 @@
             textoArray.forEach((letra, i) => {
                 setTimeout(() => elemento.innerHTML += letra, 55 * i)
             });
-            
+
         }
         const historia = document.querySelector('.texto-dinamico-historia');
         typeWriter(historia);

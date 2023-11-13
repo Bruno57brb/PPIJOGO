@@ -116,3 +116,25 @@
     margin-top: 12px;
     font-size: large;
 }
+.nome-historia {
+    position: fixed;
+    left: 44.5%;
+    top: 35.5%;
+    /* Definimos a largura da página */
+    width: 120px;
+    /* Definirmos a altura da página*/
+    height: 50px;
+    /* Aqui definiremos a cor de fundo da página */
+    background-color: #ffffff;
+    /* bordas */
+    border-radius: 5px 5px 5px 5px;
+    border: 1px solid #52626a;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: left;
+    opacity: 0.8;
+}
+.nome-historia p{
+    margin-left: 15px;
+    margin-top: 12px;
+    font-size: medium;
+}
