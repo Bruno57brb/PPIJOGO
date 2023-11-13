@@ -28,16 +28,17 @@
             
 </div>
 <div class="icone_fem"> 
-<img src="../img/icone_femenino.png" width="150px" height="150px">
+<img src="../img/icone_femenino.png" width="120px" height="120px">
 
 </div>
-
 
 <div class="icone_mas"> 
-<img src="../img/icone_masculino.png" width="140px" height="140px">
+<img src="../img/icone_masculino.png" width="120px" height="120px">
 
 </div>
 
+<div class="borda">  </div>
+<div class="borda_2">  </div>
 
     <button type="button" class="iniciar"><a href="jogo.php">INICIAR</a></button>
 </body>
