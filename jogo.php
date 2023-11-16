@@ -57,7 +57,7 @@
     <video autoplay muted loop id="myVideo">
         <source src="<?php echo $dados['video']; ?>" type="video/mp4">
     </video>
-    <audio>
+    <audio autoplay loop>
         <source src="<?php echo $dados['musica']; ?>" type="audio/mpeg">
     </audio>
     <div class="historia">
