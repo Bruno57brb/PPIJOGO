@@ -2,7 +2,7 @@
 
 // Receber os dados do formulário
 $nome = $_POST['nome'];
-$genero = $_POST[''];
+$genero = $_POST['genero'];
 
 // Conectar ao BD
 include("../conecta.php");
