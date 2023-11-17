@@ -48,17 +48,20 @@
 
         #myVideo {
             position: fixed;
-            right: 0;
-            bottom: 0;
-            min-width: 100%;
-            min-height: 100%;
+            right: 20%;
+            bottom: 11%;
+            width: 1400px;
+            height: 662px;
         }
     </style>
-    <video autoplay muted loop id="myVideo">
-        <source src="<?php echo $dados['video']; ?>" type="video/mp4">
-    </video>
+    <?php if ($dados['video'] == "") {
+    } else { ?>
+        <video autoplay loop id="myVideo">
+            <source src="img/<?php echo $dados['video']; ?>" type="video/mp4">
+        </video>
+    <?php } ?>
     <audio autoplay loop>
-        <source src="<?php echo $dados['musica']; ?>" type="audio/mpeg">
+        <source src="img/<?php echo $dados['musica']; ?>" type="audio/mpeg">
     </audio>
     <div class="historia">
         <?php if ($dados['nome'] == "") {
@@ -78,12 +81,20 @@
 
         <?php if ($dados['texto'] == "") {
 
-        } else { ?>
-            <div class="balao-historia">
-                <p class="texto-dinamico-historia">
-                    <?php echo $dados['texto'];
+        } else {
+            if ($dados["animacao"] == "0") { ?>
+                <div class="balao-historia">
+                    <p class="texto-dinamico-historia">
+                        <?php echo $dados['texto']; ?>
+                    </p>
+                </div>
+            <?php } else { ?>
+                <div class="balao-historia">
+                    <p>
+                        <?php echo $dados['texto']; ?>
+                    </p>
+           <?php }
         } ?>
-            </p>
         </div>
     </div>
     <div class="escolhas">
@@ -106,29 +117,35 @@
         <img src="img/<?php echo $usuario['imagem']; ?>" class="personagem-escolhas" width="400" height="400">
     </div>
     <script>
-        function typeWriter(elemento) {
-            const textoArray = elemento.innerHTML.split('');
-            elemento.innerHTML = '';
-            textoArray.forEach((letra, i) => {
-                setTimeout(() => elemento.innerHTML += letra, 55 * i)
-            });
+        function typeWriterSlow(elemento) {
+  const textoArray = elemento.innerHTML.split('');
+  elemento.innerHTML = '';
+  textoArray.forEach((letra, i) => {
+    setTimeout(() => elemento.innerHTML += letra, 30 * i);
+  });
+}
+const historia = document.querySelector('.texto-dinamico-historia');
+typeWriterSlow(historia);
 
-        }
-        const historia = document.querySelector('.texto-dinamico-historia');
-        typeWriter(historia);
+</script>
+<script>
+function typeWriterFast(elemento) {
+  const textoArray = elemento.innerHTML.split('');
+  elemento.innerHTML = '';
 
-        function escrever(escolha) {
-            const textoArray = escolha.innerHTML.split('');
-            escolha.innerHTML = '';
-            textoArray.forEach((letra, i) => {
-                setTimeout(() => escolha.innerHTML += letra, 55 * i)
-            });
+  setTimeout(() => {
+    textoArray.forEach((letra, i) => {
+      setTimeout(() => elemento.innerHTML += letra, 50 * i);
+    });
+  }, 3000);
+}
 
-        }
-        const escolhas = document.querySelectorAll('.texto-dinamico-escolhas');
-        variasOpcoes(escolhas);
+const escolhasFast = document.querySelectorAll('.texto-dinamico-escolhas');
+escolhasFast.forEach(elemento => {
+  typeWriterFast(elemento);
+});
 
-    </script>
+</script>
 </body>
 
 </html>

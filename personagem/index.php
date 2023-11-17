@@ -15,6 +15,8 @@ $sql = "SELECT * FROM usuario";
 $resultado = mysqli_query($conexao, $sql);
 
 $genero = (isset($_GET['genero']) ? $_GET['genero'] : 1);
+if ($genero == 1) { $img = "../img/personagem-masc.png"; }
+else if ($genero == 2) { $img = "../img/personagem-fem.png";; }
 ?>
 
 <body>
@@ -24,27 +26,24 @@ $genero = (isset($_GET['genero']) ? $_GET['genero'] : 1);
 
   <div class="nome">
 
-
     <form action="usuarioCAD.php" method="POST">
       <p><label class="label-nome">
           <span>Nome</span>
-          <input type="text" name="nome" class="input">
-          <input type="hidden" value="<?php echo $genero ?>">
+          <input type="text" name="nome" class="input" required>
+          <input type="hidden" name="imagem" value="<?php echo $img; ?>" required>
         </label></p>
-      <button type="button" class="iniciar"><a href="../index.php">INICIAR</a></button>
-    </form>
-
-
-
-  </div>
-  <div class="fundo"> </div>
-  <div class="genero">
-    <?php
-    if ($genero == "2") {
-      $img = "personagem-fem.png"; ?>
+        <button type="submit" class="iniciar"><a href="../index.php">INICIAR</a></button>
+      </form>
+      
+      
+      
+    </div>
+    <div class="fundo"> </div>
+    <div class="genero">
+      <?php
+    if ($genero == "2") { ?>
       <img src="../img/<?php echo $img; ?>" width="400px" height="400px">
-    <?php } else {
-      $img = "personagem-masc.png"; ?>
+    <?php } else { ?>
       <img src="../img/<?php echo $img; ?>" width="400px" height="400px">
     <?php } ?>
   </div>
