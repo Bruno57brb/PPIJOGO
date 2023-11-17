@@ -16,7 +16,7 @@ $resultado = mysqli_query($conexao, $sql);
 
 $genero = (isset($_GET['genero']) ? $_GET['genero'] : 1);
 if ($genero == 1) { $img = "../img/personagem-masc.png"; }
-else if ($genero == 2) { $img = "../img/personagem-fem.png";; }
+else if ($genero == 2) { $img = "../img/personagem-fem.png"; }
 ?>
 
 <body>
@@ -32,7 +32,7 @@ else if ($genero == 2) { $img = "../img/personagem-fem.png";; }
           <input type="text" name="nome" class="input" required>
           <input type="hidden" name="imagem" value="<?php echo $img; ?>" required>
         </label></p>
-        <button type="submit" class="iniciar"><a href="../index.php">INICIAR</a></button>
+        <button type="submit" class="iniciar">INICIAR</button>
       </form>
       
       
