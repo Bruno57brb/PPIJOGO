@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="img/EC.png">
     <title>Enigma Capital</title>
     <?php
-    $id = (isset($_GET['id_destino']) ? $_GET['id_destino'] : -2);
+    $id = (isset($_GET['id_destino']) ? $_GET['id_destino'] : -4);
     $idU = (isset($_GET['id_usuario']) ? $_GET['id_usuario'] : 0);
     function Historia($id)
     {
@@ -49,9 +49,9 @@
         #myVideo {
             position: fixed;
             right: 20%;
-            bottom: 11%;
-            width: 1400px;
-            height: 662px;
+            bottom: 1%;
+            width: 1150px;
+            height: 1000px;
         }
     </style>
     <?php if ($dados['video'] == "") {
