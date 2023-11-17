@@ -15,8 +15,8 @@ $sql = "SELECT * FROM usuario";
 $resultado = mysqli_query($conexao, $sql);
 
 $genero = (isset($_GET['genero']) ? $_GET['genero'] : 1);
-if ($genero == 1) { $img = "../img/personagem-masc.png"; }
-else if ($genero == 2) { $img = "../img/personagem-fem.png"; }
+if ($genero == 1) { $img = "personagem-masc.png"; }
+else if ($genero == 2) { $img = "personagem-fem.png"; }
 ?>
 
 <body>

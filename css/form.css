@@ -1,3 +1,6 @@
+*{
+  font-size: large;
+}
 form {
     color: black;
     font-weight: bolder;
@@ -8,6 +11,7 @@ form {
     background-color: #dddddd;
     border-radius: 5px;
     color: black;
+    font-size: large;
     font-weight: bold;
   }
   input[type="submit"]{
