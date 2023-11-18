@@ -10,7 +10,9 @@ body {
   --medium-grey: #A7A7A7;
 
 }
-
+*{
+  font-size: large;
+}
 .iniciar {
   position: fixed;
   right: 25%;

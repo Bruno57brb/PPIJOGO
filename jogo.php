@@ -61,7 +61,9 @@
         </video>
     <?php } ?>
     <audio autoplay loop>
-        <source src="img/<?php echo $dados['musica']; ?>" type="audio/mpeg">
+        <?php if ($dados['musica'] == '1') { ?>
+        <source src="img/Lost Painting.mp3" type="audio/mpeg">
+        <?php } ?>
     </audio>
     <div class="historia">
         <?php if ($dados['nome'] == "") {
