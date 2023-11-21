@@ -11,6 +11,12 @@ ul {
     overflow: hidden;
     background-color: #5B5959;
 }
+li {
+    float:left;
+}
+.lang{
+    float: right;
+}
 li a {
     color: rgb(253, 250, 250);
     text-align: center;

@@ -4,23 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./css/cenario.css">
-    <link rel="stylesheet" href="./css/navbar-1.css">
     <link rel="shortcut icon" href="img/EC.png">
     <title>Enigma Capital</title>
     <?php
     $id = (isset($_GET['id_destino']) ? $_GET['id_destino'] : -4);
     $idU = (isset($_GET['id_usuario']) ? $_GET['id_usuario'] : 0);
-    function Historia($id)
+    $lang = (isset($_GET['lang']) ? $_GET['lang'] : 1);
+    function Historia($id, $lang) 
     {
         include("conecta.php");
-        $sql = "SELECT * FROM historia WHERE id_historia=$id";
+        if ($lang == "1") {
+            $sql = "SELECT * FROM historia WHERE id_historia=$id";
+        } else if ($lang == "2") {
+            $sql = "SELECT * FROM historiaEN WHERE id_historia=$id";
+        }
         $resultado = mysqli_query($conexao, $sql);
         return (mysqli_fetch_assoc($resultado));
     }
-    function Escolha($id)
+    function Escolha($id, $lang)
     {
         include("conecta.php");
-        $sql = "SELECT * FROM escolhas WHERE id_historia=$id";
+        if ($lang == "1") {
+            $sql = "SELECT * FROM escolhas WHERE id_historia=$id";
+        } else if ($lang == "2") {
+            $sql = "SELECT * FROM escolhasEN WHERE id_historia=$id";
+        }
         $resultado = mysqli_query($conexao, $sql);
         return (mysqli_fetch_all($resultado, MYSQLI_ASSOC));
     }
@@ -36,7 +44,7 @@
 
 <body>
     <?php require_once "navbar.php"; ?>
-    <?php $dados = Historia($id); ?>
+    <?php $dados = Historia($id, $lang); ?>
     <style>
         body {
             background-image: url('img/<?php echo $dados['cenario']; ?>');
@@ -62,7 +70,7 @@
     <?php } ?>
     <audio autoplay loop>
         <?php if ($dados['musica'] == '1') { ?>
-        <source src="img/Lost Painting.mp3" type="audio/mpeg">
+            <source src="img/Lost Painting.mp3" type="audio/mpeg">
         <?php } ?>
     </audio>
     <div class="historia">
@@ -95,13 +103,13 @@
                     <p>
                         <?php echo $dados['texto']; ?>
                     </p>
-           <?php }
+                <?php }
         } ?>
         </div>
     </div>
     <div class="escolhas">
         <div class="balao-escolha">
-            <?php foreach (Escolha($id) as $escolha): ?>
+            <?php foreach (Escolha($id, $lang) as $escolha): ?>
                 <div class="texto-escolha">
                     <?php echo '<a class="texto-dinamico-escolhas" href="jogo.php?id_destino=' . $escolha['id_destino'] . '&id_usuario=' . $escolha['id_usuario'] . '">' . $escolha['escolha'] . ' </a>'; ?>
                 </div>
@@ -120,34 +128,34 @@
     </div>
     <script>
         function typeWriterSlow(elemento) {
-  const textoArray = elemento.innerHTML.split('');
-  elemento.innerHTML = '';
-  textoArray.forEach((letra, i) => {
-    setTimeout(() => elemento.innerHTML += letra, 30 * i);
-  });
-}
-const historia = document.querySelector('.texto-dinamico-historia');
-typeWriterSlow(historia);
+            const textoArray = elemento.innerHTML.split('');
+            elemento.innerHTML = '';
+            textoArray.forEach((letra, i) => {
+                setTimeout(() => elemento.innerHTML += letra, 30 * i);
+            });
+        }
+        const historia = document.querySelector('.texto-dinamico-historia');
+        typeWriterSlow(historia);
 
-</script>
-<script>
-function typeWriterFast(elemento) {
-  const textoArray = elemento.innerHTML.split('');
-  elemento.innerHTML = '';
+    </script>
+    <script>
+        function typeWriterFast(elemento) {
+            const textoArray = elemento.innerHTML.split('');
+            elemento.innerHTML = '';
 
-  setTimeout(() => {
-    textoArray.forEach((letra, i) => {
-      setTimeout(() => elemento.innerHTML += letra, 50 * i);
-    });
-  }, 3000);
-}
+            setTimeout(() => {
+                textoArray.forEach((letra, i) => {
+                    setTimeout(() => elemento.innerHTML += letra, 50 * i);
+                });
+            }, 3000);
+        }
 
-const escolhasFast = document.querySelectorAll('.texto-dinamico-escolhas');
-escolhasFast.forEach(elemento => {
-  typeWriterFast(elemento);
-});
+        const escolhasFast = document.querySelectorAll('.texto-dinamico-escolhas');
+        escolhasFast.forEach(elemento => {
+            typeWriterFast(elemento);
+        });
 
-</script>
+    </script>
 </body>
 
 </html>
