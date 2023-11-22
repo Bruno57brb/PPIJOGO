@@ -48,7 +48,7 @@
     
           
 </form>
-       <h1 class="tamanho"> <a href="Restaurar.php" class="login__link">restaurar conta</a>
+       <h1 class="tamanho"> 
         <a href="criar.php" class="login__link">criar conta</a></h1>
      
 </body>

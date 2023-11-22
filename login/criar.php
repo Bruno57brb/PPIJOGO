@@ -49,7 +49,7 @@
                   </svg>
                 </button>
 </form>
-              <h1 class="tamanho"> <a href="Restaurar.php" class="login__link">restaurar conta</a>
+              <h1 class="tamanho"> 
               <a href="index.php" class="login__link">login</a></h1>
          
 </body>
