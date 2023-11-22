@@ -2,7 +2,7 @@
 session_start();
 
 if(empty($_POST) or (empty($_POST['email']) or (empty($_POST['senha'])))) {
-    echo"<script>location.href='../index.php';</script>";
+    echo"<script>location.href='';</script>";
 }
 include('conecta.php');
 
@@ -19,9 +19,9 @@ $sql = "SELECT * FROM  usuario
  if($qtd > 0 ){
     $_SESSION['email'] = $usuario;
     $_SESSION['nome'] = $row->nome;
-    header ('Location: dashboard.php');
+    header ('Location: ');
  }else{
     echo"alert('Usuário e/ou senha incorreto(s)')";
-    header ('Location: ../index.php');
+    header ('Location: protect.php');
  }
  ?>
