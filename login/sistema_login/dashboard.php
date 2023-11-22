@@ -17,7 +17,7 @@ if(empty($_SESSION)){
   <link
     href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
   <script src="script.js" defer></script>
 
   <title>LOGIN</title>
@@ -25,7 +25,7 @@ if(empty($_SESSION)){
 <body>
 <?php
 echo"ola," . $_SESSION["nome"];
-echo "<a href='logout.php'>"
+echo "<a href='../index.php'>"
 
 ?>
 

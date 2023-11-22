@@ -2,7 +2,7 @@
 session_start();
 
 if(empty($_POST) or (empty($_POST['email']) or (empty($_POST['senha'])))) {
-    print"<script>location.href='../index.php';</script>";
+    echo"<script>location.href='../index.php';</script>";
 }
 include('conecta.php');
 
