@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;500;600;700&display=swap');
 
 body {
-  background: url('images/wallpaper.png');
+  background: url('../images/wallpaper.png');
   background-repeat: no-repeat;
   background-size: cover;
   font-family: 'Roboto';
@@ -94,7 +94,7 @@ p{
   transition: background .3s;
   font-size: larger;
   position: relative;
-  left: 80px;
+  left: 87px;
   
 }
 
@@ -130,6 +130,3 @@ margin-top: 240px;
   flex-wrap: wrap-reverse;
 }
 
-.wrapper{
-  position: relative;
-}
