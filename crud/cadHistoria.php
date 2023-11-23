@@ -18,7 +18,6 @@
         }
     </style>
 
-
         <form action="cadastrarHistoria.php" method="post" enctype="multipart/form-data">
             <div class="form">
                 <strong>História <br><textarea name="texto" rows="5" cols="30" required></textarea><br>
@@ -31,6 +30,12 @@
             <strong>Personagem</strong>
                  <br><label for="personagem">Enviar Personagem</label><input type="file" name="personagem" id="personagem" required><br>
             
+                 <strong>Idioma</strong>
+                 <br><select name="lang" id="lang">
+                    <option value="1">PT</option>
+                    <option value="2">EN</option>
+                 </select>
+                 
                 <br> <br>
                 <div class="enviar"><input type="submit" value="Cadastrar"></div>
         </form>
