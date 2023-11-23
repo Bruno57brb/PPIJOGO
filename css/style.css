@@ -126,20 +126,8 @@ a:hover {
   white-space: nowrap;
   overflow: hidden;
 }
-.typing-animation{
-  animation: blinkCursor 500ms infinite normal, typing 5s steps(40) 1s normal;
-}
-@keyframes blinkCursor{
-  from{
-    border-right-color: black;
-  }to{
-    border-right-color: transparent;
-  }
-}
-@keyframes typing{
-  from{
-    width: 0;
-  }to{
-    width: 100%;
-  }
+.lang{
+  position: fixed;
+  bottom: 5%;
+  left: 3%;
 }

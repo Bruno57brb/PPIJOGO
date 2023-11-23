@@ -111,7 +111,7 @@
         <div class="balao-escolha">
             <?php foreach (Escolha($id, $lang) as $escolha): ?>
                 <div class="texto-escolha">
-                    <?php echo '<a class="texto-dinamico-escolhas" href="jogo.php?id_destino=' . $escolha['id_destino'] . '&id_usuario=' . $escolha['id_usuario'] . '">' . $escolha['escolha'] . ' </a>'; ?>
+                    <?php echo '<a class="texto-dinamico-escolhas" href="jogo.php?id_destino=' . $escolha['id_destino'] . '&id_usuario=' . $escolha['id_usuario'] . '&lang=' . $lang .'">' . $escolha['escolha'] . ' </a>'; ?>
                 </div>
             <?php endforeach; ?>
         </div>
