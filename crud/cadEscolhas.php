@@ -26,6 +26,11 @@
                     ID Destino <br><input type="text" name="id_destino" required><br>
                     ID Escolha </strong><br><input type="text" name="id_escolha" required><br>
             </div>
+            <strong>Idioma</strong>
+                 <br><select name="lang" id="lang">
+                    <option value="1">PT</option>
+                    <option value="2">EN</option>
+                 </select>
             <br> <br>
             <div class="enviar"><input type="submit" value="Cadastrar"></div>
         </form>

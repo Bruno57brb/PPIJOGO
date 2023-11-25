@@ -3,6 +3,7 @@ include("../conecta.php");
 
 $id = $_GET['id_escolha'];
 $texto = $_GET['escolha'];
+$lang = $_GET['lang'];
 
 //Seleciona todos os dados da tabela lista
 $sql = "SELECT * FROM escolhas WHERE id_escolha=$id";
@@ -21,7 +22,11 @@ $dados = mysqli_fetch_assoc($resultado);
     <meta charset="UTF-8">
     <title>PPI</title>
     <?php include("../conecta.php");
+    if($lang == '1'){
     $sql = "SELECT * FROM escolhas";
+    }else{
+    $sql = "SELECT * FROM escolhasen";
+    }
     $resultado = mysqli_query($conexao, $sql);
     ?>
 </head>

@@ -50,3 +50,6 @@ input,
 label {
     margin: 0rem 10;
 }
+.submenu,.submenuE {
+    display: none;
+  }
