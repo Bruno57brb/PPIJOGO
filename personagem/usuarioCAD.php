@@ -9,7 +9,7 @@ include("../conecta.php");
  
 $expire = 10000;
 setcookie("nome", $nome, $expire, "/", false, true);
-setcookie("imagem", $imagem, $expire, "/", false, true);
+setcookie("imagem", $img, $expire, "/", false, true);
 
 // Montar o comando SQL
 $sql = "INSERT INTO usuario(nome, imagem) VALUES ('$nome', '$img')";
