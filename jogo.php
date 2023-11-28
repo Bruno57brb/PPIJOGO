@@ -121,11 +121,11 @@
     if($usuario['id_usuario'] == '1') { ?>
     <div class="nome-usuario">
         <p>
-            <?php echo $_COOKIE['nome']; ?>
+            <?php echo $usuario['nome']; ?>
         </p>
     </div>
     <div class="fundo-personagem">
-        <img src="img/<?php echo $_COOKIE['imagem']; ?>" class="personagem-escolhas" width="400" height="400">
+        <img src="img/<?php echo $usuario['imagem']; ?>" class="personagem-escolhas" width="400" height="400">
     </div>
     <?php }else{ ?>
     <div class="nome-usuario">
