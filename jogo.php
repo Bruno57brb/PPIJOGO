@@ -117,7 +117,17 @@
         </div>
     </div>
 
-    <?php $usuario = Usuario($idU) ?>
+    <?php $usuario = Usuario($idU); 
+    if($usuario['id_usuario'] == '1') { ?>
+    <div class="nome-usuario">
+        <p>
+            <?php echo $_COOKIE['nome']; ?>
+        </p>
+    </div>
+    <div class="fundo-personagem">
+        <img src="img/<?php echo $_COOKIE['imagem']; ?>" class="personagem-escolhas" width="400" height="400">
+    </div>
+    <?php }else{ ?>
     <div class="nome-usuario">
         <p>
             <?php echo $usuario['nome']; ?>
@@ -126,6 +136,7 @@
     <div class="fundo-personagem">
         <img src="img/<?php echo $usuario['imagem']; ?>" class="personagem-escolhas" width="400" height="400">
     </div>
+    <?php }?>
     <script>
         function typeWriterSlow(elemento) {
             const textoArray = elemento.innerHTML.split('');

@@ -7,9 +7,7 @@ include('conecta.php');
 
 $usuario =  $_POST['email'];
 $senha = $_POST['senha'];
-$sql = "SELECT * FROM  usuario
- WHERE email    = '{$usuario}'
- AND  senha = '{$senha}'";
+$sql = "SELECT * FROM  usuario WHERE email = '{$usuario}' AND  senha = '{$senha}'";
 
 $res = $conexao->query($sql) or die($conexao->error);
 $row = $res->fetch_object();
