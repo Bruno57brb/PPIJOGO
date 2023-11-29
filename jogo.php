@@ -10,6 +10,7 @@
     $id = (isset($_GET['id_destino']) ? $_GET['id_destino'] : -4);
     $idU = (isset($_GET['id_usuario']) ? $_GET['id_usuario'] : 0);
     $lang = (isset($_GET['lang']) ? $_GET['lang'] : 1);
+    $usuario = Usuario($idU); 
     function Historia($id, $lang) 
     {
         include("conecta.php");
@@ -95,7 +96,7 @@
             if ($dados["animacao"] == "0") { ?>
                 <div class="balao-historia">
                     <p class="texto-dinamico-historia">
-                        <?php echo $dados['texto']; ?>
+                        <?php echo str_replace("P.P", $usuario['nome'], $dados['texto']) ?>
                     </p>
                 </div>
             <?php } else { ?>
@@ -117,7 +118,7 @@
         </div>
     </div>
 
-    <?php $usuario = Usuario($idU); 
+    <?php
     if($usuario['id_usuario'] == '1') { ?>
     <div class="nome-usuario">
         <p>
