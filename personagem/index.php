@@ -36,8 +36,6 @@ else if ($genero == 2) { $img = "personagem-fem.png"; }
         <button type="submit" class="iniciar">INICIAR</button>
       </form>
       
-      <?php var_dump($_SESSION); ?>
-      
     </div>
     <div class="fundo"> </div>
     <div class="genero">
