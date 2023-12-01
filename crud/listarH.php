@@ -38,6 +38,7 @@
       <th scope="col">Cenário</th>
       <th scope="col">Personagem</th>
       <th scope="col">Nome</th>
+      <th scope="col">Video</th>
       <th scope="col">Opções</th>
     </strong>
     </tr>';
@@ -48,6 +49,7 @@
     echo "<td>" . $dados['cenario'] . "</td>";
     echo "<td>" . $dados['personagem'] . "</td>";
     echo "<td>" . $dados['nome'] . "</td>";
+    echo "<td>" . $dados['video'] . "</td>";
     echo "<td><a href='../crud/editarH.php?id_historia=" . $dados['id_historia'] . "&texto=" . $dados['texto'] . "'>" . "<img src='../img/settings.png' widht='20' height='20'" . "</a>";
     echo " <a href='../crud/excluirHistoria.php?id_historia=" . $dados['id_historia'] . "'>" . "<img src='../img/lixeira.png' widht='20' height='20'" . "</a></td>";
     echo '</tr>';

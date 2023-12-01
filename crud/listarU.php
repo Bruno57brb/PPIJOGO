@@ -35,6 +35,9 @@
     <strong>
       <th scope="col">Id Usuário</th>
       <th scope="col">Nome</th>
+      <th scope="col">Imagem</th>
+      <th scope="col">Email</th>
+      <th scope="col">Senha</th>
       <th scope="col">Opções</th>
     </strong>
     </tr>';
@@ -42,6 +45,9 @@
   while ($dados = mysqli_fetch_assoc($resultado)) {
     echo "<td> " . $dados['id_usuario'] . " </td>";
     echo "<td> " . $dados['nome'] . "</td>";
+    echo "<td> " . $dados['imagem'] . "</td>";
+    echo "<td> " . $dados['email'] . "</td>";
+    echo "<td> " . $dados['senha'] . "</td>";
     echo "<td><a href='../crud/excluirUsuario.php?id_usuario=" . $dados['id_usuario'] . "'>" . "<img src='../img/lixeira.png' widht='20' height='20'" . "</a></td>";
     echo '</tr>';
   }
