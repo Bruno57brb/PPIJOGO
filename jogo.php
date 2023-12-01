@@ -122,7 +122,7 @@
     if($usuario['id_usuario'] == '1') { ?>
     <div class="nome-usuario">
         <p>
-            <?php echo $usuario['nome']; ?>
+            <?php echo $_SESSION['nome']; ?>
         </p>
     </div>
     <div class="fundo-personagem">

@@ -1,18 +1,15 @@
 <?php
 
+session_start();
+
 // Receber os dados do formulário
 $nome = $_POST['nome'];
 $img = $_POST['imagem'];
 
 // Conectar ao BD
 include("../conecta.php");
- 
-$expire = 10000;
-setcookie("nome", $nome, $expire, "/", false, true);
-setcookie("imagem", $img, $expire, "/", false, true);
-
 // Montar o comando SQL
-$sql = "INSERT INTO usuario(nome, imagem) VALUES ('$nome', '$img')";
+$sql = "UPDATE usuario SET nome = $nome, imagem = $img WHERE id_usuario = ";
 // Executar o comando SQL
 if (mysqli_query($conexao, $sql)) {
     echo "Arquivo enviado com sucesso!";

@@ -32,12 +32,12 @@
 
           <p><label class="login__label">
               <span>E-mail</span>
-              <input type="email" name="email" class="input">
+              <input type="email" name="email" class="input" required>
             </label></p>
 
           <p><label class="login__label">
               <span>Senha</span>
-              <input type="password" name="password" class="input">
+              <input type="password" name="password" class="input" required>
             </label></p>
 
 

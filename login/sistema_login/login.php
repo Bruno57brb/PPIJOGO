@@ -15,8 +15,8 @@ $qtd = $res->num_rows;
 
 if($qtd > 0 ){
     $_SESSION['email'] = $usuario;
-    $_SESSION['nome'] = $row->nome;
-    header ('Location: ../../index.php ');
+    $_SESSION['senha'] = $senha;
+    header ('Location: ../../personagem/index.php ');
  }else{
     echo"alert('Usuário e/ou senha incorreto(s)')";
     header ('Location: protect.php');

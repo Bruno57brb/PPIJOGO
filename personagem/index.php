@@ -1,6 +1,6 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -32,10 +32,11 @@ else if ($genero == 2) { $img = "personagem-fem.png"; }
           <input type="text" name="nome" class="input" required>
           <input type="hidden" name="imagem" value="<?php echo $img; ?>" required>
         </label></p>
+
         <button type="submit" class="iniciar">INICIAR</button>
       </form>
       
-      
+      <?php var_dump($_SESSION); ?>
       
     </div>
     <div class="fundo"> </div>
