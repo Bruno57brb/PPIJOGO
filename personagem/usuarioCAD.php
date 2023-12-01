@@ -9,7 +9,7 @@ $img = $_POST['imagem'];
 // Conectar ao BD
 include("../conecta.php");
 // Montar o comando SQL
-$sql = "UPDATE usuario SET nome = $nome, imagem = $img WHERE id_usuario = LAST_INSERT_ID()";
+$sql = "UPDATE usuario SET nome = '$nome', imagem = '$img' WHERE id_usuario = ".$_SESSION['id'];
 // Executar o comando SQL
 if (mysqli_query($conexao, $sql)) {
     echo "Arquivo enviado com sucesso!";

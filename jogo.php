@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,10 +6,14 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./css/cenario.css">
     <link rel="shortcut icon" href="img/EC.png">
-    <title>Enigma Capital</title>
+    <title>Enigma Capital </title>
     <?php
     $id = (isset($_GET['id_destino']) ? $_GET['id_destino'] : -4);
-    $idU = (isset($_GET['id_usuario']) ? $_GET['id_usuario'] : 0);
+    if(isset($_SESSION['id'])){
+        $idU = $_SESSION['id'];
+    }else{
+        $idU = '$_GET["id_usuario"]';
+    }
     $lang = (isset($_GET['lang']) ? $_GET['lang'] : 1);
     $usuario = Usuario($idU); 
     function Historia($id, $lang) 
@@ -122,7 +127,7 @@
     if($usuario['id_usuario'] == '1') { ?>
     <div class="nome-usuario">
         <p>
-            <?php echo $_SESSION['nome']; ?>
+            <?php echo $usuario['nome']; ?>
         </p>
     </div>
     <div class="fundo-personagem">

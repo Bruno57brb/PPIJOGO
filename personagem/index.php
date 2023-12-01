@@ -11,7 +11,7 @@
 </head>
 <?php
 include("../conecta.php");
-$sql = "SELECT * FROM usuario";
+$sql = "SELECT * FROM usuario WHERE id_usuario=".$_SESSION['id'];
 $resultado = mysqli_query($conexao, $sql);
 
 $genero = (isset($_GET['genero']) ? $_GET['genero'] : 1);
