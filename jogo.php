@@ -9,10 +9,10 @@
     <title>Enigma Capital </title>
     <?php
     $id = (isset($_GET['id_destino']) ? $_GET['id_destino'] : -4);
-    if(isset($_SESSION['id'])){
-        $idU = $_SESSION['id'];
+    if($_GET["id_usuario"] == 0){
+        $idU = $_GET["id_usuario"] = 0;
     }else{
-        $idU = '$_GET["id_usuario"]';
+        $idU = $_SESSION['id'];
     }
     $lang = (isset($_GET['lang']) ? $_GET['lang'] : 1);
     $usuario = Usuario($idU); 
@@ -123,8 +123,6 @@
         </div>
     </div>
 
-    <?php
-    if($usuario['id_usuario'] == '1') { ?>
     <div class="nome-usuario">
         <p>
             <?php echo $usuario['nome']; ?>
@@ -133,16 +131,6 @@
     <div class="fundo-personagem">
         <img src="img/<?php echo $usuario['imagem']; ?>" class="personagem-escolhas" width="400" height="400">
     </div>
-    <?php }else{ ?>
-    <div class="nome-usuario">
-        <p>
-            <?php echo $usuario['nome']; ?>
-        </p>
-    </div>
-    <div class="fundo-personagem">
-        <img src="img/<?php echo $usuario['imagem']; ?>" class="personagem-escolhas" width="400" height="400">
-    </div>
-    <?php }?>
     <script>
         function typeWriterSlow(elemento) {
             const textoArray = elemento.innerHTML.split('');

@@ -5,7 +5,7 @@ session_start();
 // Receber os dados do formulário
 $nome = $_POST['nome'];
 $img = $_POST['imagem'];
-
+$email = $_SESSION['email'];
 // Conectar ao BD
 include("../conecta.php");
 // Montar o comando SQL
@@ -16,4 +16,8 @@ if (mysqli_query($conexao, $sql)) {
 } else {
     echo "Falha ao enviar arquivo.";
 }
-header('Location: ../index.php');
+if($email = "lorenzo.2022310934@aluno.iffar.edu.br"){
+    header('Location: ../jogoADM.php');
+}else{
+    header('Location: ../index.php');
+}
