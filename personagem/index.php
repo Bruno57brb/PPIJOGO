@@ -1,6 +1,7 @@
 <?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,12 +12,15 @@
 </head>
 <?php
 include("../conecta.php");
-$sql = "SELECT * FROM usuario WHERE id_usuario=".$_SESSION['id'];
+$sql = "SELECT * FROM usuario WHERE id_usuario=" . $_SESSION['id'];
 $resultado = mysqli_query($conexao, $sql);
 
 $genero = (isset($_GET['genero']) ? $_GET['genero'] : 1);
-if ($genero == 1) { $img = "personagem-masc.png"; }
-else if ($genero == 2) { $img = "personagem-fem.png"; }
+if ($genero == 1) {
+  $img = "personagem-masc.png";
+} else if ($genero == 2) {
+  $img = "personagem-fem.png";
+}
 ?>
 
 <body>
@@ -24,22 +28,22 @@ else if ($genero == 2) { $img = "personagem-fem.png"; }
   <div class="fundo-2"></div>
 
 
-  <div class="nome">
 
-    <form action="usuarioCAD.php" method="POST">
-      <p><label class="label-nome">
-          <span>Nome</span>
-          <input type="text" name="nome" class="input" required>
-          <input type="hidden" name="imagem" value="<?php echo $img; ?>" required>
-        </label></p>
-
-        <button type="submit" class="iniciar">INICIAR</button>
-      </form>
-      
+  <form action="usuarioCAD.php" method="POST">
+    <div class="nome">
+      <label class="label-nome">
+        <span>Nome</span>
+        <input type="text" name="nome" class="input" required>
+        <input type="hidden" name="imagem" value="<?php echo $img; ?>" required>
+      </label>
     </div>
-    <div class="fundo"> </div>
-    <div class="genero">
-      <?php
+
+    <button type="submit" class="iniciar">INICIAR</button>
+  </form>
+
+  <div class="fundo"> </div>
+  <div class="genero">
+    <?php
     if ($genero == "2") { ?>
       <img src="../img/<?php echo $img; ?>" width="400px" height="400px">
     <?php } else { ?>
