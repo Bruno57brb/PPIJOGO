@@ -17,7 +17,7 @@ if (mysqli_query($conexao, $sql)) {
     echo "Falha ao enviar arquivo.";
 }
 if($email = "lorenzo.2022310934@aluno.iffar.edu.br"){
-    header('Location: ../jogoADM.php');
+    header('Location: ../jogo/jogoADM.php');
 }else{
-    header('Location: ../index.php');
+    header('Location: ../jogo/index.php');
 }

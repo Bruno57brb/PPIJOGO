@@ -8,10 +8,10 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="./login/css/criar.css">
   <script src="script.js" defer></script>
 
-  <title>LOGIN</title>
+  <title>CRIAR</title>
 </head>
 
 <body>
@@ -20,20 +20,27 @@
 
     <div class="body-content">
 
-      <div class="container">
+      <div class="game-container">
 
-        <div class="title title-white">LOGIN</div>
+        <div class="title title-white">Criar conta</div>
 
-        <form action="sistema_login/login.php" method="POST">
+        <form action="sistema_login/cadastrar.php" method="POST">
+          <p><label class="login__label">
+              <span>Nome</span>
+              <input type="text" name="username" class="input">
+            </label></p>
+
           <p><label class="login__label">
               <span>E-mail</span>
-              <input type="email" name="email" class="input">
+              <input type="email" name="email" class="input" required>
             </label></p>
 
           <p><label class="login__label">
               <span>Senha</span>
-              <input type="password" name="senha" class="input">
+              <input type="password" name="password" class="input" required>
             </label></p>
+
+
 
           <button type="submit" class="login__button" disabled>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -43,7 +50,7 @@
           </button>
         </form>
         <h1 class="tamanho">
-          <a href="criar.php" class="login__link">criar conta</a>
+          <a href="index.php" class="login__link">login</a>
         </h1>
 
 </body>

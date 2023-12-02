@@ -4,18 +4,21 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="./css/cenario.css">
-    <link rel="shortcut icon" href="img/EC.png">
+    <link rel="stylesheet" href="../css/cenario.css">
+    <link rel="shortcut icon" href="../img/EC.png">
     <title>Enigma Capital </title>
     <?php
-    $id = (isset($_GET['id_destino']) ? $_GET['id_destino'] : -4);
+    $id = (isset($_GET['id_destino']) ? $_GET['id_destino'] : -1);
     if($_GET["id_usuario"] == 0){
         $idU = $_GET["id_usuario"] = 0;
+    }elseif($_GET["id_usuario"] == -1){
+        $idU = $_GET["id_usuario"] = -1;
     }else{
         $idU = $_SESSION['id'];
+
     }
-    $lang = (isset($_GET['lang']) ? $_GET['lang'] : 1);
     $usuario = Usuario($idU); 
+    $lang = (isset($_GET['lang']) ? $_GET['lang'] : 1);
     function Historia($id, $lang) 
     {
         include("conecta.php");
@@ -53,7 +56,7 @@
     <?php $dados = Historia($id, $lang); ?>
     <style>
         body {
-            background-image: url('img/<?php echo $dados['cenario']; ?>');
+            background-image: url('../img/<?php echo $dados['cenario']; ?>');
             background-position: center;
             background-repeat: no-repeat;
             background-attachment: fixed;
@@ -71,12 +74,12 @@
     <?php if ($dados['video'] == "") {
     } else { ?>
         <video autoplay loop id="myVideo">
-            <source src="img/<?php echo $dados['video']; ?>" type="video/mp4">
+            <source src="../img/<?php echo $dados['video']; ?>" type="video/mp4">
         </video>
     <?php } ?>
     <audio autoplay loop>
         <?php if ($dados['musica'] == '1') { ?>
-            <source src="img/Lost Painting.mp3" type="audio/mpeg">
+            <source src="../img/Lost Painting.mp3" type="audio/mpeg">
         <?php } ?>
     </audio>
     <div class="historia">
@@ -92,7 +95,7 @@
         <?php if ($dados['personagem'] == "") {
 
         } else { ?>
-            <img src="img/<?php echo $dados['personagem']; ?>" class="personagem-historia" width="400" height="400">
+            <img src="../img/<?php echo $dados['personagem']; ?>" class="personagem-historia" width="400" height="400">
         <?php } ?>
 
         <?php if ($dados['texto'] == "") {
@@ -129,7 +132,7 @@
         </p>
     </div>
     <div class="fundo-personagem">
-        <img src="img/<?php echo $usuario['imagem']; ?>" class="personagem-escolhas" width="400" height="400">
+        <img src="../img/<?php echo $usuario['imagem']; ?>" class="personagem-escolhas" width="400" height="400">
     </div>
     <script>
         function typeWriterSlow(elemento) {

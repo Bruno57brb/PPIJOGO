@@ -25,3 +25,9 @@ li a:hover:not(.active) {
     background-color: #6f6c6c;
     border-radius: 5px 5px 5px 5px;
 }
+.sair{
+    position: fixed;
+    top: 1%;
+    right: 2%;
+    line-height: 270%;
+}
