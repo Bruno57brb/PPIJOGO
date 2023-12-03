@@ -27,7 +27,7 @@
   $sql = "SELECT * FROM escolhas";
   //executa o select
   $resultado = mysqli_query($conexao, $sql);
-
+  $lang = 1;
   //lista os itens
   echo ' <div class="table">
   <table>
@@ -46,7 +46,7 @@
     echo "<td>" . $dados['id_escolha'] . " </td>";
     echo "<td>" . $dados['id_destino'] . " </td>";
     echo "<td> " . $dados['escolha'] . "</td>";
-    echo "<td><a href='../crud/editarE.php?id_escolha=" . $dados['id_escolha'] . "&escolha=" . $dados['escolha'] . "'>" . "<img src='../img/settings.png' widht='20' height='20'" . "</a>";
+    echo "<td><a href='../crud/editarE.php?id_escolha=" . $dados['id_escolha'] . "&lang=" . $lang . "'>" . "<img src='../img/settings.png' widht='20' height='20'" . "</a>";
     echo " <a href='../crud/excluirEscolhas.php?id_escolha=" . $dados['id_escolha'] . "'>" . "<img src='../img/lixeira.png' widht='20' height='20'" . "</a></td>";
     echo '</tr>';
   }

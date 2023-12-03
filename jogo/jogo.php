@@ -9,17 +9,17 @@
     <title>Enigma Capital </title>
     <?php
     $id = (isset($_GET['id_destino']) ? $_GET['id_destino'] : -1);
-    if($_GET["id_usuario"] == 0){
+    if ($_GET["id_usuario"] == 0) {
         $idU = $_GET["id_usuario"] = 0;
-    }elseif($_GET["id_usuario"] == -1){
+    } elseif ($_GET["id_usuario"] == -1) {
         $idU = $_GET["id_usuario"] = -1;
-    }else{
+    } else {
         $idU = $_SESSION['id'];
 
     }
-    $usuario = Usuario($idU); 
+    $usuario = Usuario($idU);
     $lang = (isset($_GET['lang']) ? $_GET['lang'] : 1);
-    function Historia($id, $lang) 
+    function Historia($id, $lang)
     {
         include("conecta.php");
         if ($lang == "1") {
@@ -120,7 +120,7 @@
         <div class="balao-escolha">
             <?php foreach (Escolha($id, $lang) as $escolha): ?>
                 <div class="texto-escolha">
-                    <?php echo '<a class="texto-dinamico-escolhas" href="jogo.php?id_destino=' . $escolha['id_destino'] . '&id_usuario=' . $escolha['id_usuario'] . '&lang=' . $lang .'">' . str_replace("P.P", $usuario['nome'], $escolha['escolha']) . ' </a>'; ?>
+                    <?php echo '<a class="texto-dinamico-escolhas" href="jogo.php?id_destino=' . $escolha['id_destino'] . '&id_usuario=' . $escolha['id_usuario'] . '&lang=' . $lang . '">' . str_replace("P.P", $usuario['nome'], $escolha['escolha']) . ' </a>'; ?>
                 </div>
             <?php endforeach; ?>
         </div>

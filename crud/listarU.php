@@ -48,7 +48,8 @@
     echo "<td> " . $dados['imagem'] . "</td>";
     echo "<td> " . $dados['email'] . "</td>";
     echo "<td> " . $dados['senha'] . "</td>";
-    echo "<td><a href='../crud/excluirUsuario.php?id_usuario=" . $dados['id_usuario'] . "'>" . "<img src='../img/lixeira.png' widht='20' height='20'" . "</a></td>";
+    echo "<td><a href='../crud/editarU.php?id_usuario=" . $dados['id_usuario'] . "'>" . "<img src='../img/settings.png' widht='20' height='20'" . "</a>";
+    echo "<a href='../crud/excluirUsuario.php?id_usuario=" . $dados['id_usuario'] . "'>" . "<img src='../img/lixeira.png' widht='20' height='20'" . "</a></td>";
     echo '</tr>';
   }
   echo '</table>

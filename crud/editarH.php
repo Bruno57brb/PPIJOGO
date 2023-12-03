@@ -2,10 +2,14 @@
 include("../conecta.php");
 
 $id = $_GET['id_historia'];
-$texto = $_GET['texto'];
+$lang = $_GET['lang'];
 
 //Seleciona todos os dados da tabela lista
-$sql = "SELECT * FROM historia WHERE id_historia=$id";
+if($lang == '1'){
+    $sql = "SELECT * FROM historia WHERE id_historia=$id";
+    }else{
+        $sql = "SELECT * FROM historiaen WHERE id_historia=$id";
+    }
 
 //executa o select
 $resultado = mysqli_query($conexao, $sql);
@@ -20,10 +24,6 @@ $dados = mysqli_fetch_assoc($resultado);
 <head>
     <meta charset="UTF-8">
     <title>PPI</title>
-    <?php include("../conecta.php");
-    $sql = "SELECT * FROM historia";
-    $resultado = mysqli_query($conexao, $sql);
-    ?>
 </head>
 
 <body>
@@ -47,7 +47,7 @@ $dados = mysqli_fetch_assoc($resultado);
 
         <strong>Personagem</strong>
         <br><label for="personagem">Enviar Personagem</label><input type="file" name="personagem" id="personagem"><br>
-
+        <input type="hidden" name="lang" value="<?php echo $lang; ?>" required>
         <br> <br> <input type="submit" value="Editar">
     </form>
 </body>

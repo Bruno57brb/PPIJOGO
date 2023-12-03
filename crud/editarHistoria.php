@@ -2,6 +2,7 @@
 
 $texto = $_POST['texto'];
 $id = $_POST['id_historia'];
+$lang = $_POST['lang'];
 
 include("../conecta.php");
 

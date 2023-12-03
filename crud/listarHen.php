@@ -27,7 +27,7 @@
   $sql = "SELECT * FROM historiaen";
   //executa o select
   $resultado = mysqli_query($conexao, $sql);
-
+  $lang = 2;
   //lista os itens
   echo ' <div class="table">
   <table>
@@ -50,7 +50,7 @@
     echo "<td>" . $dados['personagem'] . "</td>";
     echo "<td>" . $dados['nome'] . "</td>";
     echo "<td>" . $dados['video'] . "</td>";
-    echo "<td><a href='../crud/editarH.php?id_historia=" . $dados['id_historia'] . "&texto=" . $dados['texto'] . "'>" . "<img src='../img/settings.png' widht='20' height='20'" . "</a>";
+    echo "<td><a href='../crud/editarH.php?id_historia=" . $dados['id_historia'] . "&lang=" . $lang . "'>" . "<img src='../img/settings.png' widht='20' height='20'" . "</a>";
     echo " <a href='../crud/excluirHistoria.php?id_historia=" . $dados['id_historia'] . "'>" . "<img src='../img/lixeira.png' widht='20' height='20'" . "</a></td>";
     echo '</tr>';
   }

@@ -14,6 +14,7 @@
 include("../conecta.php");
 $sql = "SELECT * FROM usuario WHERE id_usuario=" . $_SESSION['id'];
 $resultado = mysqli_query($conexao, $sql);
+$usuario = mysqli_fetch_assoc($resultado);
 
 $genero = (isset($_GET['genero']) ? $_GET['genero'] : 1);
 if ($genero == 1) {
@@ -33,7 +34,7 @@ if ($genero == 1) {
     <div class="nome">
       <label class="label-nome">
         <span>Nome</span>
-        <input type="text" name="nome" class="input" required>
+        <input type="text" name="nome" class="input" required value="<?php echo $usuario['nome']; ?>">
         <input type="hidden" name="imagem" value="<?php echo $img; ?>" required>
       </label>
     </div>
