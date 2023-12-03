@@ -11,7 +11,7 @@
 <header>
     <nav>
       <ul class="menu">
-        <li class="home"><a href="../jogo/jogoADM.php"><img src="../img/logo.png" width="70px" height="70px"></a></li>
+        <li class="home"><a href="../jogo/jogoADM.php"><img src="../img/logo.png" width="90px" height="auto"></a></li>
         <div id="menu">
           <li class="cadastrar-historia"><a href="cadHistoria.php" class="cadastrar-historia">Cadastrar Historia</a></li>
           <li class="cadastrar-escolha"><a href="cadEscolhas.php" class="cadastrar-escolha">Cadastrar Escolha</a></li>
