@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="../css/form.css">
+    <link rel="shortcut icon" href="../img/EC.png">
     <title>PPI</title>
 </head>
 

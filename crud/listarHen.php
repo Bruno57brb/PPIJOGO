@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="../css/navbar.css">
   <link rel="stylesheet" href="../css/form.css">
   <link rel="stylesheet" href="../css/listar.css">
+  <link rel="shortcut icon" href="../img/EC.png">
   <title>PPI</title>
 </head>
 

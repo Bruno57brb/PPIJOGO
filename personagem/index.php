@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/usuario.css">
+  <link rel="shortcut icon" href="../img/EC.png">
   <script src="java.js"></script>
   <title>Enigma Capital</title>
 </head>
