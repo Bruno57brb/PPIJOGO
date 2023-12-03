@@ -26,11 +26,6 @@
 
         <form action="sistema_login/cadastrar.php" method="POST">
           <p><label class="login__label">
-              <span>Nome</span>
-              <input type="text" name="username" class="input">
-            </label></p>
-
-          <p><label class="login__label">
               <span>E-mail</span>
               <input type="email" name="email" class="input" required>
             </label></p>
