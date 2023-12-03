@@ -120,7 +120,10 @@
         <div class="balao-escolha">
             <?php foreach (Escolha($id, $lang) as $escolha): ?>
                 <div class="texto-escolha">
-                    <?php echo '<a class="texto-dinamico-escolhas" href="jogo.php?id_destino=' . $escolha['id_destino'] . '&id_usuario=' . $escolha['id_usuario'] . '&lang=' . $lang . '">' . str_replace("P.P", $usuario['nome'], $escolha['escolha']) . ' </a>'; ?>
+                    <?php if($escolha['id_historia'] == -5){
+                        echo '<a href="index.php">Jogar novamente</a><br>';
+                        echo '<br><a href="../sair.php">Sair</a>';
+                    }else{ echo '<a class="texto-dinamico-escolhas" href="jogo.php?id_destino=' . $escolha['id_destino'] . '&id_usuario=' . $escolha['id_usuario'] . '&lang=' . $lang . '">' . str_replace("P.P", $usuario['nome'], $escolha['escolha']) . ' </a>'; }?>
                 </div>
             <?php endforeach; ?>
         </div>
