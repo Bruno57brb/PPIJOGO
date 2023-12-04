@@ -32,7 +32,7 @@
     }
     function Escolha($id, $lang)
     {
-        include("conecta.php");
+        include("../conecta.php");
         if ($lang == "1") {
             $sql = "SELECT * FROM escolhas WHERE id_historia=$id";
         } else if ($lang == "2") {
@@ -43,7 +43,7 @@
     }
     function Usuario($idU)
     {
-        include("conecta.php");
+        include("../conecta.php");
         $sql = "SELECT * FROM usuario WHERE id_usuario=$idU";
         $resultado = mysqli_query($conexao, $sql);
         return (mysqli_fetch_assoc($resultado));
