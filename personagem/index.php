@@ -26,10 +26,8 @@ if ($genero == 1) {
 ?>
 
 <body>
-  <div class="fundo-1"></div>
-  <div class="fundo-2"></div>
-
-
+  <img class="logo" src="../img/enigma-branco" width="220px" height="auto">
+<h1 class="personagem">Selecione seu personagem: </h1>
 
   <form action="usuarioCAD.php" method="POST">
     <div class="nome">
@@ -42,30 +40,21 @@ if ($genero == 1) {
 
     <button type="submit" class="iniciar">INICIAR</button>
   </form>
-
-  <div class="fundo"> </div>
-  <div class="genero">
-    <?php
-    if ($genero == "2") { ?>
-      <img src="../img/<?php echo $img; ?>" width="400px" height="400px">
-    <?php } else { ?>
-      <img src="../img/<?php echo $img; ?>" width="400px" height="400px">
+<div class="borda-fem">
+  <?php if($genero ==2){ ?>
+    <a href="index.php?genero=2"><img class="img-fem-active" src="../img/personagem-fem.png" width="300px" height="auto"></a>
+    <?php }else{ ?>
+      <a href="index.php?genero=2"><img class="img-fem" src="../img/personagem-fem.png" width="300px" height="auto"></a>
     <?php } ?>
-  </div>
-
-
-  <button type="button" class="icone_fem">
-    <a href="index.php?genero=2"><img src="../img/icone_femenino.png" width="110px" height="110px"></a>
-  </button>
-
-
-  <button type="button" class="icone_mas">
-    <a href="index.php?genero=1"><img src="../img/icone_masculino.png" width="110px" height="110px"></a>
-  </button>
-
-
-  <div class="borda"></div>
-
+</div>
+<div class="borda-masc">
+  <?php if($genero == 1){ ?>
+      <a href="index.php?genero=1"><img class="img-masc-active"src="../img/personagem-masc.png" width="300px" height="auto"></a>
+    <?php }else{ ?>
+      <a href="index.php?genero=1"><img class="img-masc"src="../img/personagem-masc.png" width="300px" height="auto"></a>
+    <?php } ?>
+</div>
+<h1 class="nome-escolha">Insira o nome do seu <br><center>personagem:</center></h1>
 
 </body>
 <script>
