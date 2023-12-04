@@ -12,7 +12,7 @@
     <header>
         <nav>
             <ul class="menu">
-                <li class="home"><a href="index.php"><img src="../img/enigma-branco.png" width="70px" height="70px"></a></li>
+                <li class="home"><a href="index.php"><img src="../img/Enigma-branco.png" width="70px" height="70px"></a></li>
                 <li class="sair"><a href="../sair.php">Sair<img src="../img/sair.png" width="40px" height="40px"></a></li>
             </ul>
         </nav>
