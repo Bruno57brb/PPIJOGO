@@ -3,7 +3,7 @@ session_start();
 if(empty($_POST) or (empty($_POST['email']) or (empty($_POST['senha'])))) {
    echo"<script>location.href='';</script>";
 }
-include('conecta.php');
+include('../conecta.php');
 
 $usuario =  $_POST['email'];
 $senha = $_POST['senha'];
