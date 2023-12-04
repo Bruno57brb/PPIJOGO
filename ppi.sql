@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 03-Dez-2023 às 22:44
+-- Tempo de geração: 04-Dez-2023 às 19:56
 -- Versão do servidor: 8.0.31
--- versão do PHP: 8.0.26
+-- versão do PHP: 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -1084,12 +1084,12 @@ INSERT INTO `historiaen` (`id_historia`, `texto`, `cenario`, `personagem`, `musi
 DROP TABLE IF EXISTS `usuario`;
 CREATE TABLE IF NOT EXISTS `usuario` (
   `nome` varchar(255) DEFAULT NULL,
-  `imagem` varchar(255) NOT NULL,
+  `imagem` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
   `id_usuario` int NOT NULL AUTO_INCREMENT,
   `email` varchar(255) NOT NULL,
   `senha` varchar(255) NOT NULL,
   PRIMARY KEY (`id_usuario`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Extraindo dados da tabela `usuario`
@@ -1100,7 +1100,13 @@ INSERT INTO `usuario` (`nome`, `imagem`, `id_usuario`, `email`, `senha`) VALUES
 ('Edson', 'edson.png', 0, '', ''),
 ('', '', 1, '', ''),
 ('Antonio', 'personagem-masc.png', 4, 'mauricioanderlaine.gamerpro@gmail.com', '1234578'),
-('Lorenzo', 'personagem-masc.png', 5, 'lorenzo.2022310934@aluno.iffar.edu.br', '123456789');
+('Lorenzo', 'personagem-masc.png', 5, 'lorenzo.2022310934@aluno.iffar.edu.br', '123456789'),
+(NULL, '', 9, 'teste@gmail.com', '123456789'),
+(NULL, '', 10, '123@gmail.com', '12345678'),
+(NULL, '', 11, 'teste1@gmail.com', '123456789'),
+(NULL, '', 12, 'teste2@gmail.com', '123456789'),
+(NULL, '', 13, 'email@gmail.com', '123456789'),
+('Laura', 'personagem-fem.png', 14, 'laura1022@gmail.com', '123456789');
 
 --
 -- Restrições para despejos de tabelas
