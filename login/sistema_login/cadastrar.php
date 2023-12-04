@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 include('../../conecta.php');
 
 if(empty($_POST) or (empty($_POST['nome']) or (empty($_POST['email']) or (empty($_POST['senha']))))) {
@@ -13,7 +13,6 @@ if (mysqli_query($conexao, $sql))
     else
         echo "Falha ao cadastrar pessoa.";
 }
-
 
 header('Location: ../../index.php');
  

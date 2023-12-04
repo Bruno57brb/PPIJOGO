@@ -23,7 +23,7 @@
 
         <div class="title title-white">LOGIN</div>
 
-        <form action="./login/sistema_login/login.php" method="POST">
+        <form action="login/sistema_login/login.php" method="POST">
           <p><label class="login__label">
               <span>E-mail</span>
               <input type="email" name="email" class="input">
