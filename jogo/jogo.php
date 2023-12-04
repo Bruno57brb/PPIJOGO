@@ -21,7 +21,7 @@
     $lang = (isset($_GET['lang']) ? $_GET['lang'] : 1);
     function Historia($id, $lang)
     {
-        include("conecta.php");
+        include("../conecta.php");
         if ($lang == "1") {
             $sql = "SELECT * FROM historia WHERE id_historia=$id";
         } else if ($lang == "2") {
