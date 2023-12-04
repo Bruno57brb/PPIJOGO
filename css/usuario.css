@@ -51,23 +51,6 @@ body {
   margin-top: 15%;
 }
 
-.label-nome span {
-  position: absolute;
-  font-size: 1em;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: white;
-  margin: 20px;
-  cursor: text;
-  transition: all 200ms ease;
-  margin-top: 20%;
-}
-
-.label-nome .span-active {
-  font-size: 0.7em;
-  margin: 50px 10px;
-}
-
 .nome {
   position: fixed;
   width: 300px;

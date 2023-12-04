@@ -31,11 +31,9 @@ if ($genero == 1) {
 
   <form action="usuarioCAD.php" method="POST">
     <div class="nome">
-      <label class="label-nome">
-        <span>Nome</span>
+      
         <input type="text" name="nome" class="input" required value="<?php echo $usuario['nome']; ?>">
         <input type="hidden" name="imagem" value="<?php echo $img; ?>" required>
-      </label>
     </div>
 
     <button type="submit" class="iniciar">INICIAR</button>
