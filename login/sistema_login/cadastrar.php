@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('../conecta.php');
+include('../../conecta.php');
 
 if(empty($_POST) or (empty($_POST['nome']) or (empty($_POST['email']) or (empty($_POST['senha']))))) {
 $usuario =  $_POST['email'];
