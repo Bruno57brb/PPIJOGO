@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <label class="titulo"><img src="../img/Enigma" width="350px" height="350px"></label><br>
+    <label class="titulo"><img src="../img/Enigma.png" width="350px" height="350px"></label><br>
     <?php
     $lang = (isset($_GET['lang']) ? $_GET['lang'] : 1);
     if ($lang == 1) {
