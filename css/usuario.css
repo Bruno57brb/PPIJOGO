@@ -16,7 +16,7 @@ body {
 .iniciar {
   position: fixed;
   right: 48%;
-  top: 45%;
+  top: 32%;
   width: 8em;
   margin-top: -2.5em;
   border: 3px solid #ffffff;
@@ -55,7 +55,7 @@ body {
   position: fixed;
   width: 300px;
   height: 150px;
-  right: 44%;
+  right: 42%;
   top: 68%;
 }
 .input{
@@ -68,7 +68,7 @@ body {
 .img-fem,.img-fem-active{
   position: absolute;
   top: 20%;
-  left: 25%;
+  left: 18%;
 }
 .img-fem:hover,.img-fem-active{
   background-color: rgb(255, 202, 249);
@@ -88,7 +88,7 @@ body {
 .personagem{
   position: absolute;
   top: 5%;
-  right: 45%;
+  right: 41%;
   color:black;
   font-size: 30px;
   background-color: #ffffff;
@@ -101,7 +101,7 @@ center{
 .nome-escolha{
   position: absolute;
   top: 55%;
-  right: 45%;
+  right: 43%;
   color:black;
   font-size: 30px;
   background-color: #ffffff;
