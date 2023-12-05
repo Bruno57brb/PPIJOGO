@@ -25,7 +25,7 @@
         if ($lang == "1") {
             $sql = "SELECT * FROM historia WHERE id_historia=$id";
         } else if ($lang == "2") {
-            $sql = "SELECT * FROM historiaEN WHERE id_historia=$id";
+            $sql = "SELECT * FROM historiaen WHERE id_historia=$id";
         }
         $resultado = mysqli_query($conexao, $sql);
         return (mysqli_fetch_assoc($resultado));
@@ -36,7 +36,7 @@
         if ($lang == "1") {
             $sql = "SELECT * FROM escolhas WHERE id_historia=$id";
         } else if ($lang == "2") {
-            $sql = "SELECT * FROM escolhasEN WHERE id_historia=$id";
+            $sql = "SELECT * FROM escolhasen WHERE id_historia=$id";
         }
         $resultado = mysqli_query($conexao, $sql);
         return (mysqli_fetch_all($resultado, MYSQLI_ASSOC));
