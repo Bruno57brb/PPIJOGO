@@ -16,7 +16,7 @@ if (mysqli_query($conexao, $sql)) {
 } else {
     echo "Falha ao enviar arquivo.";
 }
-if($email == "lorenzo.2022310934@aluno.iffar.edu.br"){
+if($email == "lorenzo.2022310934@aluno.iffar.edu.br" or "bruno.2022310863@aluno.iffar.edu.br" or "laura.2022315529@aluno.iffar.edu.br" or "antonio.2022324018@aluno.iffar.edu.br"){
     header('Location: ../jogo/jogoADM.php');
 }else{
     header('Location: ../jogo/index.php');
