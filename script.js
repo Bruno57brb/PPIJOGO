@@ -16,7 +16,7 @@ const handleFocusOut = ({ target }) => {
 const handleChange = () => {
   const [username, password] = inputs;
 
-  if (username.value && password.value.length >= 8) {
+  if (username.value && password.value.length >= 3) {
     alert("Senha no mínimo 8 caracteres");
     button.removeAttribute('disabled');
   } else {
