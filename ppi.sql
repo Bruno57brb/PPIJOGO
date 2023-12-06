@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 04-Dez-2023 às 19:56
+-- Tempo de geração: 06-Dez-2023 às 12:27
 -- Versão do servidor: 8.0.31
 -- versão do PHP: 8.2.0
 
@@ -811,7 +811,7 @@ INSERT INTO `historia` (`id_historia`, `texto`, `cenario`, `personagem`, `musica
 (210, 'Me levantei e sentei na cadeira disposta em frente ao computador, ao ligar a tela notei \"Digite a senha\" a ideia foi por água abaixo, como eu iria saber aquilo? ', 'escritorio-vilao.png', '', '', '', '', 0),
 (211, 'Tentei várias e várias vezes mas nenhuma senha se encaixava, eu estava prestes a tentar mais uma vez até escutar o barulho do ranger da porta e ao me virar para trás...', 'escritorio-vilao.png', '', '', '', '', 0),
 (212, 'O que você está fazendo?!', 'escritorio-vilao.png', 'andre.png', '', 'André', '', 0),
-(213, NULL, 'later.png', '', '', '', '', 0),
+(213, NULL, '1972.png', '', '', '', '', 0),
 (214, 'Talvez isso possa mudar minha vida para melhor e eu consiga dar tudo que há de bom para meu pai... Eu aceito André', 'escritorio-vilao.png', '', '', '', '', 0),
 (215, 'Que bom que soube pensar, mas saiba que nunca deve contar sobre o que sabe desta história para ninguém...', 'escritorio-vilao.png', 'andre.png', '', 'André', '', 0),
 (216, 'Não esta fazendo nada de errado, que tal um brinde para comemorar?', 'escritorio-vilao.png', 'andre.png', '', 'André', '', 0),
@@ -1061,7 +1061,7 @@ INSERT INTO `historiaen` (`id_historia`, `texto`, `cenario`, `personagem`, `musi
 (210, 'I got up and sat on the chair in front of the computer, when I turned on the screen I noticed \"Enter the password\" the idea went out the window, how would I know that?', 'escritorio-vilao.png', '', '', '', '', 0),
 (211, 'I tried over and over again but none of the passwords fit, I was about to try again until I heard the sound of the door creaking and when I turned back...', 'escritorio-vilao.png', '', '', '', '', 0),
 (212, 'What are you doing?!', 'escritorio-vilao.png', 'andre.png', '', 'André', '', 0),
-(213, NULL, 'later.png', '', '', '', '', 0),
+(213, NULL, '1972.png', '', '', '', '', 0),
 (214, 'Maybe this can change my life for the better and I can give everything good to my father... I accept André', 'escritorio-vilao.png', '', '', '', '', 0),
 (215, 'I\'m glad you knew how to think, but know that you should never tell anyone about what you know about this story...', 'escritorio-vilao.png', 'andre.png', '', 'André', '', 0),
 (216, 'You\'re not doing anything wrong, how about a toast to celebrate?', 'escritorio-vilao.png', 'andre.png', '', 'André', '', 0),
