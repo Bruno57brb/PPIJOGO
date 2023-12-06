@@ -15,8 +15,8 @@ body {
 }
 .iniciar {
   position: fixed;
-  right: 48%;
-  top: 32%;
+  right: 44%;
+  top: 35%;
   width: 8em;
   margin-top: -2.5em;
   border: 3px solid #ffffff;
@@ -55,7 +55,7 @@ body {
   position: fixed;
   width: 300px;
   height: 150px;
-  right: 42%;
+  right: 38%;
   top: 68%;
 }
 .input{
@@ -68,7 +68,7 @@ body {
 .img-fem,.img-fem-active{
   position: absolute;
   top: 20%;
-  left: 18%;
+  left: 22%;
 }
 .img-fem:hover,.img-fem-active{
   background-color: rgb(255, 202, 249);
@@ -76,7 +76,7 @@ body {
 .img-masc,.img-masc-active{
   position: absolute;
   top: 20%;
-  left: 55%;
+  left: 58%;
 }
 .img-masc:hover,.img-masc-active{
   background-color: rgb(110, 216, 254);
@@ -88,7 +88,7 @@ body {
 .personagem{
   position: absolute;
   top: 5%;
-  right: 41%;
+  right: 36%;
   color:black;
   font-size: 30px;
   background-color: #ffffff;
@@ -101,7 +101,7 @@ center{
 .nome-escolha{
   position: absolute;
   top: 55%;
-  right: 43%;
+  right: 39%;
   color:black;
   font-size: 30px;
   background-color: #ffffff;
