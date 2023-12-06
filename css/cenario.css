@@ -37,7 +37,7 @@
 
 .balao-historia {
     position: fixed;
-    right: 49%;
+    right: 46%;
     top: 40%;
     /* Definimos a largura da página */
     width: 400px;
@@ -59,13 +59,13 @@
 
 .fundo-personagem {
     position: fixed;
-    left: 26%;
-    top: 70%;
+    left: 25%;
+    top: 67%;
     margin-top: -2.5em;
     border-radius: 100%;
     overflow: hidden;
-    height: 200px;
-    width: 200px;
+    height: 180px;
+    width: 180px;
     background: white;
     position: absolute;
 }
@@ -76,7 +76,7 @@
 
 .personagem-historia {
     position: fixed;
-    right: 25%;
+    right: 8%;
     top: 61%;
     margin-top: -2.5em;
     transform: translate(-50%, -50%);
@@ -96,8 +96,8 @@
 
 .nome-usuario {
     position: fixed;
-    left: 35%;
-    top: 72%;
+    left: 37%;
+    top: 70%;
     /* Definimos a largura da página */
     width: 130px;
     /* Definirmos a altura da página*/
@@ -118,8 +118,8 @@
 }
 .nome-historia {
     position: fixed;
-    left: 44.5%;
-    top: 35.5%;
+    left: 45%;
+    top: 34%;
     /* Definimos a largura da página */
     width: 120px;
     /* Definirmos a altura da página*/
