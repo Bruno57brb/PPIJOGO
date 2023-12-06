@@ -17,6 +17,7 @@ const handleChange = () => {
   const [username, password] = inputs;
 
   if (username.value && password.value.length >= 8) {
+    alert("Senha no mínimo 8 caracteres");
     button.removeAttribute('disabled');
   } else {
     button.setAttribute('disabled', '');
