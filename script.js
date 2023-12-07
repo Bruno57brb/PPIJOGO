@@ -15,13 +15,6 @@ const handleFocusOut = ({ target }) => {
 
 const handleChange = () => {
   const [username, password] = inputs;
-
-  if (username.value && password.value.length >= 3) {
-    alert("Senha no mínimo 8 caracteres");
-    button.removeAttribute('disabled');
-  } else {
-    button.setAttribute('disabled', '');
-  }
 }
 
 inputs.forEach((input) => input.addEventListener('focus', handleFocus));
