@@ -20,8 +20,8 @@
     <button type="button" class="crud"><a href="../crud/cadHistoria.php">CRUD</a></button>
     <label class="autores">Autores:<br><br>Antonio Mongelo<br>Bruno Bitencourt<br>Laura Oliveira<br>Lorenzo Marty<br></label>
     <div class="lang">
-        <a href="jogo.php?lang=1"><img src="../img/PT.png"></a></li>
-        <a href="jogo.php?lang=2"><img src="../img/EN.png"></a></li>
+        <a href="jogo.php?lang=1&id_usuario=0"><img src="../img/PT.png"></a></li>
+        <a href="jogo.php?lang=2&id_usuario=0"><img src="../img/EN.png"></a></li>
     </div>
 </body>
 
