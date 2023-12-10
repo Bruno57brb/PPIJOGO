@@ -24,7 +24,11 @@ if (isset($_FILES['cenario']) and (isset($_FILES['personagem']))) {
     move_uploaded_file($_FILES['personagem']['tmp_name'], $diretorio . $personagem);
 
     //cadastra no banco
+    if($lang == 1){
     $sql = "UPDATE historia SET texto = '$texto', cenario ='$cenario', personagem ='$personagem' WHERE id_historia = $id";
+    }else{
+        $sql = "UPDATE historiaen SET texto = '$texto', cenario ='$cenario', personagem ='$personagem' WHERE id_historia = $id"; 
+    }
     if (mysqli_query($conexao, $sql))
         echo "cenario enviado com sucesso!";
     else

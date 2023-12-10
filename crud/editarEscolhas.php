@@ -7,7 +7,7 @@ $idD = $_POST['id_destino'];
 $lang = $_POST['lang'];
 
 include("../conecta.php");
-if($lang == '1'){
+if($lang == 1){
     $sql = "UPDATE escolhas SET escolha = '$escolhas', id_historia = '$idH', id_destino='$idD' WHERE id_escolha = $idE";
     }else{
         $sql = "UPDATE escolhasen SET escolha = '$escolhas', id_historia = '$idH', id_destino='$idD' WHERE id_escolha = $idE";

@@ -5,7 +5,7 @@ $id = $_GET['id_escolha'];
 $lang = $_GET['lang'];
 
 //Seleciona todos os dados da tabela lista
-if($lang == '1'){
+if($lang == 1){
     $sql = "SELECT * FROM escolhas WHERE id_escolha=$id";
     }else{
         $sql = "SELECT * FROM escolhasen WHERE id_escolha=$id";

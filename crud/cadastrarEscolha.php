@@ -11,9 +11,9 @@ $lang = $_POST['lang'];
 include("../conecta.php");
 
 // Montar o comando SQL
-if($lang == '1'){   
+if($lang == 1){   
     $sql = "INSERT INTO escolhas(escolha, id_historia, id_escolha, id_destino) VALUES ('$escolha', $idH, $idE, $idD)";
-}else if ($lang == '2'){
+}else if ($lang == 2){
     $sql = "INSERT INTO escolhasen(escolha, id_historia, id_escolha, id_destino) VALUES ('$escolha', $idH, $idE, $idD)";
 }
 // Executar o comando SQL
