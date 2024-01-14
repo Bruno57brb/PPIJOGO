@@ -1,18 +1,21 @@
+/* IMAGEM DE FUNDO */
 body {
-  background-image: url('../img/personagem.png');
-  background-position: center;
+  background-image: url('../img/personagem.svg');
   background-repeat: no-repeat;
-  background-attachment: fixed;
   background-size: cover;
+  background-position: left center;
+  background-attachment:fixed;
 }
 
 * {
   font-size: large;
 }
+/* LOGO ENIGMA CAPITAL */
 .logo{
   position: absolute;
   top: -1%
 }
+/* BOTÃO INICIAR */
 .iniciar {
   position: fixed;
   right: 44%;
@@ -36,21 +39,23 @@ body {
   color: white;
   text-decoration: none;
 }
-
+/* INPUT NOME DO PERSONAGEM */
 .input {
-  width: 88%;
+  width: 80%;
   background-color: black;
   border: 2px solid rgba(0, 0, 0, 0);
   border-radius: 5px;
   outline: none;
+  padding: 0px 10px 5px;
   font-size: 0.9em;
-  padding: 25px 10px 10px;
   font-weight: 600;
   color: var(--deep-grey);
   border-bottom: 1px solid white;
-  margin-top: 15%;
+  margin: 28% 35%;
 }
-
+.input{
+  color:#ffffff;
+}
 .nome {
   position: fixed;
   width: 300px;
@@ -58,8 +63,10 @@ body {
   right: 38%;
   top: 68%;
 }
-.input{
-  color:#ffffff;
+/* IMAGEM DOS PERSONAGENS */
+.img-fem,.img-fem-active,.img-masc,.img-masc-active{
+  width: 300px;
+  height: auto;
 }
 .borda-fem img{
   border:#ffffff 3px solid;
@@ -85,6 +92,7 @@ body {
   border:#ffffff 3px solid;
   border-radius: 100%;
 }
+/* TEXTOS */
 .personagem{
   position: absolute;
   top: 5%;
@@ -107,4 +115,42 @@ center{
   background-color: #ffffff;
   border-radius: 5px;
   padding: 4px;
+}
+@media only screen and (min-width: 1025px){
+  .input{
+    margin: 25% 37%;
+  }
+  .iniciar {
+    position: fixed;
+    right: 35%;
+    top: 35%;
+  }
+  .img-fem,.img-fem-active,.img-masc,.img-masc-active{
+    width: 280px;
+    height: auto;
+  }
+  .img-masc,.img-masc-active{
+    position: absolute;
+    top: 20%;
+    left: 58%;
+  }
+  .img-fem,.img-fem-active{
+    position: absolute;
+    top: 20%;
+    left: 25%;
+  }
+  .personagem{
+    position: absolute;
+    top: 8%;
+    right: 28%;
+  }
+  .nome-escolha{
+    position: absolute;
+    top: 60%;
+    right: 32%;
+    font-size: 25px;
+  }
+  center{
+    font-size: 25px;
+  }
 }

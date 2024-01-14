@@ -40,16 +40,16 @@ if ($genero == 1) {
   </form>
 <div class="borda-fem">
   <?php if($genero ==2){ ?>
-    <a href="index.php?genero=2"><img class="img-fem-active" src="../img/personagem-fem.png" width="300px" height="auto"></a>
+    <a href="index.php?genero=2"><img class="img-fem-active" src="../img/personagem-fem.png"></a>
     <?php }else{ ?>
-      <a href="index.php?genero=2"><img class="img-fem" src="../img/personagem-fem.png" width="300px" height="auto"></a>
+      <a href="index.php?genero=2"><img class="img-fem" src="../img/personagem-fem.png"></a>
     <?php } ?>
 </div>
 <div class="borda-masc">
   <?php if($genero == 1){ ?>
-      <a href="index.php?genero=1"><img class="img-masc-active"src="../img/personagem-masc.png" width="300px" height="auto"></a>
+      <a href="index.php?genero=1"><img class="img-masc-active" src="../img/personagem-masc.png"></a>
     <?php }else{ ?>
-      <a href="index.php?genero=1"><img class="img-masc"src="../img/personagem-masc.png" width="300px" height="auto"></a>
+      <a href="index.php?genero=1"><img class="img-masc" src="../img/personagem-masc.png"></a>
     <?php } ?>
 </div>
 <h1 class="nome-escolha">Insira o nome do seu <br><center>personagem:</center></h1>
