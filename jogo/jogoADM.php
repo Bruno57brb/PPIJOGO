@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <label class="titulo"><img src="../img/Enigma.png" width="350px" height="350px"></label><br>
+    <label class="titulo"><img src="../img/Enigma.png" width="320px" height="auto"></label><br>
     <?php
     $lang = (isset($_GET['lang']) ? $_GET['lang'] : 1);
     if ($lang == 1) {
@@ -19,10 +19,8 @@
     } ?>
     <button type="button" class="crud"><a href="../crud/cadHistoria.php">CRUD</a></button>
     <label class="autores">Autores:<br><br>Antonio Mongelo<br>Bruno Bitencourt<br>Laura Oliveira<br>Lorenzo Marty<br></label>
-    <div class="lang">
-        <a href="jogo.php?lang=1&id_usuario=0"><img src="../img/PT.png"></a></li>
-        <a href="jogo.php?lang=2&id_usuario=0"><img src="../img/EN.png"></a></li>
-    </div>
+        <a href="index.php?lang=1&id_usuario=0"><img class="pt" src="../img/PT.png"></a></li>
+        <a href="index.php?lang=2&id_usuario=0"><img class="en"src="../img/EN.png"></a></li>
 </body>
 
 </html>

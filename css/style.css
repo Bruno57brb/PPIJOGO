@@ -38,8 +38,8 @@ a {
 
 .iniciar {
   position: fixed;
-  right: 85%;
-  top: 30%;
+  right: 80%;
+  top: 27%;
   width: 8em;
   margin-top: -2.5em;
   border: 3px solid #ffffff;
@@ -86,14 +86,19 @@ a:hover {
   color: #fff;
   font-size: large;
   position: fixed;
-  top: 70%;
+  top: 60%;
   right: 5%;
   line-height: 35px;
 }
-.lang{
+.pt{
   position: fixed;
-  bottom: 5%;
-  left: 5%;
+  bottom: 10%;
+  left: 11%;
+}
+.en{
+  position: fixed;
+  bottom: 10%;
+  left: 15%;
 }
 @media only screen and (min-width: 1025px){
   body {
