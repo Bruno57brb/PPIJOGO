@@ -26,7 +26,7 @@ if ($genero == 1) {
 ?>
 
 <body>
-  <img class="logo" src="../img/Enigma-branco.png" width="190px" height="auto">
+  <img class="logo" src="../img/Enigma-branco.png">
 <h1 class="personagem">Selecione seu personagem: </h1>
 
   <form action="usuarioCAD.php" method="POST">

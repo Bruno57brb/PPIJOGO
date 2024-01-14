@@ -13,7 +13,10 @@ body {
 /* LOGO ENIGMA CAPITAL */
 .logo{
   position: absolute;
-  top: -1%
+  top: -2%;
+  width: 155px; 
+  height: auto;
+  left: 0%
 }
 /* BOTÃO INICIAR */
 .iniciar {
@@ -65,7 +68,7 @@ body {
 }
 /* IMAGEM DOS PERSONAGENS */
 .img-fem,.img-fem-active,.img-masc,.img-masc-active{
-  width: 300px;
+  width: 250px;
   height: auto;
 }
 .borda-fem img{
@@ -96,7 +99,7 @@ body {
 .personagem{
   position: absolute;
   top: 5%;
-  right: 36%;
+  right: 29%;
   color:black;
   font-size: 30px;
   background-color: #ffffff;
@@ -104,14 +107,14 @@ body {
   padding: 4px;
 }
 center{
-  font-size: 30px;
+  font-size: 20px;
 }
 .nome-escolha{
   position: absolute;
-  top: 55%;
-  right: 39%;
+  top: 65%;
+  right: 36%;
   color:black;
-  font-size: 30px;
+  font-size: 20px;
   background-color: #ffffff;
   border-radius: 5px;
   padding: 4px;
