@@ -121,12 +121,12 @@ center{
 }
 @media only screen and (min-width: 1025px){
   .input{
-    margin: 25% 37%;
+    margin: 20% 12%;
   }
   .iniciar {
     position: fixed;
-    right: 35%;
-    top: 35%;
+    right: 42%;
+    top: 26%;
   }
   .img-fem,.img-fem-active,.img-masc,.img-masc-active{
     width: 280px;
@@ -145,12 +145,12 @@ center{
   .personagem{
     position: absolute;
     top: 8%;
-    right: 28%;
+    right: 36%;
   }
   .nome-escolha{
     position: absolute;
-    top: 60%;
-    right: 32%;
+    top: 56%;
+    right: 40%;
     font-size: 25px;
   }
   center{
