@@ -1,12 +1,20 @@
 <?php
+// Inicia a sessão
+session_start();
 
-if(!isset($_SESSION)) {
-    session_start();
+// Limpa todas as variáveis de sessão
+$_SESSION = array();
+
+// Se necessário, destrói a sessão
+if (session_id() != "" || isset($_COOKIE[session_name()])) {
+    setcookie(session_name(), '', time() - 86400, '/');
 }
+session_destroy();
 
-if(!isset($_SESSION['id_usuario'])) {
-    die("Você não pode acessar esta jogo porque não está logado.<p><a href=\"..\..\index.php\">Voltar</a></p>");
-}
+// Aguarda 2 segundos antes de redirecionar o usuário
+sleep(2);
 
-
+// Redireciona o usuário após a destruição da sessão
+header("Location: index.php");
+exit;
 ?>
