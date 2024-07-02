@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 75vh;
+  background-image: url(../img/fundo_login.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: "Poppins", Arial;
+}
+#box {
+  margin: 12% auto;
+  padding: 5% 0 0;
+  width: 450px;
+  height: 450px;
+  background: rgb(193, 106, 213);
+  background: linear-gradient(
+    0deg,
+    rgb(66, 65, 67) 0%,
+    rgb(218, 218, 218) 100%
+  );
+  border-radius: 20px;
+  position: relative;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: -20%;
+}
+#logo {
+  width: 380px;
+  margin: auto;
+  margin-top: -106px;
+}
+
+.input-group {
+  position: absolute;
+  top: 150px;
+  width: 280px;
+  transition: 0.5s;
+}
+.input-field {
+  width: 100%;
+  padding: 20px;
+  margin: 5px 0;
+  outline: none;
+  border-radius: 10px;
+  border: none;
+  font-size: 15px;
+}
+
+p {
+  color: white;
+  margin: auto;
+}
+ a {
+  color: #8895cc;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+#login {
+  left: 74px;
+}
+#login p {
+  margin: auto;
+  margin-top: 20px;
+}
+#pes {
+  margin-top: 50px;
+}
+.btn {
+  text-align: center;
+  width: 60%;
+  margin-left: 40px;
+  margin-top: 15px;
+  padding: 20px 30px;
+  cursor: pointer;
+  display: block;
+  background: linear-gradient(
+    0deg,
+    #171717 0%,
+    #696969 100%
+  );
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  color: white;
+  left: 10%;
+  position: relative;
+}
+
+.btn:hover {
+  background: rgb(247, 115, 33);
+  background: linear-gradient(
+    0deg,
+    rgb(91, 91, 91) 0%,
+    rgb(44, 44, 44) 100%
+  );
+  color: white;
+  transform: translateY(-2px);
+}
+img {
+  position: absolute;
+  width: 200px;
+  height: 160px;
+  left: 28%;
+  margin-top: 10%;
+}

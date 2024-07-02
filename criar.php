@@ -5,48 +5,38 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./login/css/criar.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+  <link rel="stylesheet" href="css/style2.css">
   <link rel="shortcut icon" href="img/EC.png">
   <script src="script.js" defer></script>
-
-  <title>CRIAR</title>
+  <title>Login</title>
 </head>
 
 <body>
+  <div id="box">
+    <div id="logo">
+      <img src="img/enigma.png" alt="logo2">
+    </div>
+    <form id="login" class="input-group" action="login/cadastrar.php" method="POST">
+      <input type="email" name="usuario" placeholder="Seu Email" class="input-field" required>
+      <input type="password" name="password" placeholder="Sua Senha" class="input-field" required>
+      <button type="submit" class="btn">CADASTRAR</button>
+      <div id="pes">
+        <p>DESEJA VOLTAR ? <a href="index.php" onclick="recover()">CLIQUE AQUI</a></p>
+        <p>ESQUECEU SUA SENHA? <a href="" onclick="recover()">RECUPERAR</a></p>
+      </div>
+    </form>
+  </div>
 
-  <div class="content-page">
+  <script>
+    function recover() {
+      // Função para recuperação de senha
+    }
 
-    <div class="body-content">
-
-      <div class="game-container">
-
-        <div class="title title-white">Criar conta</div>
-
-        <form action="login/sistema_login/cadastrar.php" method="POST">
-          <p><label class="login__label">
-              <span>E-mail</span>
-              <input type="email" name="email" class="input" required>
-            </label></p>
-
-          <p><label class="login__label">
-              <span>Senha</span>
-              <input type="password" name="password" class="input" required>
-            </label></p>
-
-
-
-          <button type="submit" class="login__button">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-              <path
-                d="M438.6 278.6l-160 160C272.4 444.9 264.2 448 256 448s-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L338.8 288H32C14.33 288 .0016 273.7 .0016 256S14.33 224 32 224h306.8l-105.4-105.4c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160C451.1 245.9 451.1 266.1 438.6 278.6z" />
-            </svg>
-          </button>
-        </form>
-        <h1 class="tamanho">
-          <a href="index.php" class="login__link">login</a>
-        </h1>
-
+    function register() {
+      // Função para registro de novo usuário
+    }
+  </script>
 </body>
 
 </html>

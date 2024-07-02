@@ -8,7 +8,8 @@ $usuario = $_POST['email'];
 $senha = $_POST['senha'];
 
 
-$sql = "SELECT * FROM usuario WHERE email = '{$usuario}' AND  senha = '{$senha}'";
+
+$sql = "SELECT * FROM usuario WHERE nome = '{$usuario}' AND  senha = '{$senha}'";
 $resultado = mysqli_query($conexao, $sql);
 $dados = mysqli_fetch_assoc($resultado);
 
@@ -19,6 +20,7 @@ $qtd = $res->num_rows;
 if ($qtd > 0) {
    $_SESSION['email'] = $usuario;
    $_SESSION['senha'] = $senha;
+   $_SESSION['permissao'] =  $permissao;
    $_SESSION['id'] = $dados['id_usuario'];
    header('Location: login.php ');
 } else {
