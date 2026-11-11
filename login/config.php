@@ -1,8 +1,1 @@
-<?php
-$config = [
-    'host' => 'localhost',
-    'user' => 'root',
-    'pass' => '',
-    'db' => 'ppi',
-   
-];
+<?php require_once __DIR__.'/../bootstrap.php';

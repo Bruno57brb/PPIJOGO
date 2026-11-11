@@ -1,23 +1,5 @@
 <?php
-
-session_start();
-
-// Receber os dados do formulário
-$nome = $_POST['nome'];
-$img = $_POST['imagem'];
-$email = $_SESSION['email'];
-// Conectar ao BD
-include("../conecta.php");
-// Montar o comando SQL
-$sql = "UPDATE usuario SET nome = '$nome', imagem = '$img' WHERE id_usuario = ".$_SESSION['id'];
-// Executar o comando SQL
-if (mysqli_query($conexao, $sql)) {
-    echo "Arquivo enviado com sucesso!";
-} else {
-    echo "Falha ao enviar arquivo.";
-}
-if($email == "lorenzo.2022310934@aluno.iffar.edu.br" or "bruno.2022310863@aluno.iffar.edu.br" or "laura.2022315529@aluno.iffar.edu.br" or "antonio.2022324018@aluno.iffar.edu.br"){
-    header('Location: ../jogo/jogoADM.php');
-}else{
-    header('Location: ../jogo/index.php');
-}
+require_once __DIR__.'/../bootstrap.php';require_login('../');if($_SERVER['REQUEST_METHOD']!=='POST')redirect('index.php');check_csrf();
+$name=trim((string)($_POST['nome']??''));$img=(string)($_POST['imagem']??'');
+if($name===''||(function_exists("mb_strlen")?mb_strlen($name):strlen($name))>40||!in_array($img,['personagem-masc.png','personagem-fem.png'],true))redirect('index.php?erro=campos');
+$id=(int)$_SESSION['user_id'];$st=db()->prepare('UPDATE usuario SET nome=?,imagem=? WHERE id_usuario=?');$st->bind_param('ssi',$name,$img,$id);$st->execute();redirect('../menu.php');

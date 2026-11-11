@@ -1,172 +1,19 @@
-<?php session_start(); ?>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="../css/cenario.css">
-    <link rel="shortcut icon" href="../img/EC.png">
-    <title>Enigma Capital </title>
-    <?php
-    $id = (isset($_GET['id_destino']) ? $_GET['id_destino'] : -1);
-    if ($_GET["id_usuario"] == 0) {
-        $idU = $_GET["id_usuario"] = 0;
-    } elseif ($_GET["id_usuario"] == -1) {
-        $idU = $_GET["id_usuario"] = -1;
-    } else {
-        $idU = $_SESSION['id'];
-
-    }
-    $usuario = Usuario($idU);
-    $lang = (isset($_GET['lang']) ? $_GET['lang'] : 1);
-    function Historia($id, $lang)
-    {
-        include("../conecta.php");
-        if ($lang == "1") {
-            $sql = "SELECT * FROM historia WHERE id_historia=$id";
-        } else if ($lang == "2") {
-            $sql = "SELECT * FROM historiaen WHERE id_historia=$id";
-        }
-        $resultado = mysqli_query($conexao, $sql);
-        return (mysqli_fetch_assoc($resultado));
-    }
-    function Escolha($id, $lang)
-    {
-        include("../conecta.php");
-        if ($lang == "1") {
-            $sql = "SELECT * FROM escolhas WHERE id_historia=$id";
-        } else if ($lang == "2") {
-            $sql = "SELECT * FROM escolhasen WHERE id_historia=$id";
-        }
-        $resultado = mysqli_query($conexao, $sql);
-        return (mysqli_fetch_all($resultado, MYSQLI_ASSOC));
-    }
-    function Usuario($idU)
-    {
-        include("../conecta.php");
-        $sql = "SELECT * FROM usuario WHERE id_usuario=$idU";
-        $resultado = mysqli_query($conexao, $sql);
-        return (mysqli_fetch_assoc($resultado));
-    }
-    ?>
-</head>
-
-<body>
-    <?php require_once "navbar.php"; ?>
-    <?php $dados = Historia($id, $lang); ?>
-    <style>
-        body {
-            background-image: url('../img/<?php echo $dados['cenario']; ?>');
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: cover;
-        }
-
-        #myVideo {
-            position: fixed;
-            right: 20%;
-            bottom: 1%;
-            width: 1150px;
-            height: 1000px;
-        }
-    </style>
-    <?php if ($dados['video'] == "") {
-    } else { ?>
-        <video autoplay loop id="myVideo">
-            <source src="../img/<?php echo $dados['video']; ?>" type="video/mp4">
-        </video>
-    <?php } ?>
-    <audio autoplay loop>
-        <?php if ($dados['musica'] == '1') { ?>
-            <source src="../img/Lost Painting.mp3" type="audio/mpeg">
-        <?php } ?>
-    </audio>
-    <div class="historia">
-        <?php if ($dados['nome'] == "") {
-
-        } else { ?>
-            <div class="nome-historia">
-                <p>
-                    <?php echo $dados['nome']; ?>
-                </p>
-            </div>
-        <?php } ?>
-        <?php if ($dados['personagem'] == "") {
-
-        } else { ?>
-            <img src="../img/<?php echo $dados['personagem']; ?>" class="personagem-historia" width="400" height="400">
-        <?php } ?>
-
-        <?php if ($dados['texto'] == "") {
-
-        } else {
-            if ($dados["animacao"] == "0") { ?>
-                <div class="balao-historia">
-                    <p class="texto-dinamico-historia">
-                        <?php echo str_replace("P.P", $usuario['nome'], $dados['texto']) ?>
-                    </p>
-                </div>
-            <?php } else { ?>
-                <div class="balao-historia">
-                    <p>
-                        <?php echo str_replace("P.P", $usuario['nome'], $dados['texto']) ?>
-                    </p>
-                <?php }
-        } ?>
-        </div>
-    </div>
-    <div class="escolhas">
-        <div class="balao-escolha">
-            <?php foreach (Escolha($id, $lang) as $escolha): ?>
-                <div class="texto-escolha">
-                    <?php if($escolha['id_historia'] == -5){
-                        echo '<a href="index.php">Jogar novamente</a><br>';
-                        echo '<br><a href="../sair.php">Sair</a>';
-                    }else{ echo '<a class="texto-dinamico-escolhas" href="jogo.php?id_destino=' . $escolha['id_destino'] . '&id_usuario=' . $escolha['id_usuario'] . '&lang=' . $lang . '">' . str_replace("P.P", $usuario['nome'], $escolha['escolha']) . ' </a>'; }?>
-                </div>
-            <?php endforeach; ?>
-        </div>
-    </div>
-
-    <div class="nome-usuario">
-        <p>
-            <?php echo $usuario['nome']; ?>
-        </p>
-    </div>
-    <div class="fundo-personagem">
-        <img src="../img/<?php echo $usuario['imagem']; ?>" class="personagem-escolhas" width="400" height="400">
-    </div>
-    <script>
-        function typeWriterSlow(elemento) {
-            const textoArray = elemento.innerHTML.split('');
-            elemento.innerHTML = '';
-            textoArray.forEach((letra, i) => {
-                setTimeout(() => elemento.innerHTML += letra, 30 * i);
-            });
-        }
-        const historia = document.querySelector('.texto-dinamico-historia');
-        typeWriterSlow(historia);
-
-    </script>
-    <script>
-        function typeWriterFast(elemento) {
-            const textoArray = elemento.innerHTML.split('');
-            elemento.innerHTML = '';
-
-            setTimeout(() => {
-                textoArray.forEach((letra, i) => {
-                    setTimeout(() => elemento.innerHTML += letra, 50 * i);
-                });
-            }, 3000);
-        }
-
-        const escolhasFast = document.querySelectorAll('.texto-dinamico-escolhas');
-        escolhasFast.forEach(elemento => {
-            typeWriterFast(elemento);
-        });
-
-    </script>
-</body>
-
-</html>
+<?php
+require_once __DIR__.'/../bootstrap.php';require_login('../');
+$u=user();$lang=(int)($_GET['lang']??1);$lang=in_array($lang,[1,2],true)?$lang:1;$sceneId=filter_var($_GET['id_destino']??-1,FILTER_VALIDATE_INT);$sceneId=$sceneId===false?-1:$sceneId;
+$scene=get_scene($sceneId,$lang);if(!$scene){http_response_code(404);page_start('Cena não encontrada','../');echo '<main class="empty-state panel"><h1>Cena não encontrada</h1><p>Este capítulo não está disponível.</p><a class="btn primary" href="../menu.php">Voltar ao menu</a></main>';page_end();exit;}
+$choices=get_choices($sceneId,$lang);
+// Referências a NPCs nas escolhas antigas agora são resolvidas no servidor, não em parâmetros externos.
+$npc=['0'=>'Edson','-1'=>'André'];$character=(string)($u['nome']?:'Investigador');$displayName=$scene['nome']?:($lang===2?'Narrator':'Narrador');
+$replace=static fn(?string $s):string=>str_replace('P.P',$character,(string)$s);
+$media=static fn(?string $s):string=>($s && is_file(__DIR__.'/../img/'.basename($s)))?'../'.asset($s):'';
+$bg=$media($scene['cenario']);$portrait=$media($scene['personagem']);$video=$media($scene['video']);$playerImage=$media($u['imagem']);
+page_start('Capítulo '.$sceneId,'../');
+?>
+<main class="game" id="game" style="--scene-bg:<?=h($bg!==''?'url("'.$bg.'")':'none')?>"><div class="game-shade"></div><div class="game-top"><a class="game-back" href="../menu.php">← Menu principal</a><div class="chapter-label">ENIGMA CAPITAL <span>•</span> <?= $lang===2?'CHAPTER':'CENA'?> <?=h((string)$sceneId)?></div><div class="game-tools"><button type="button" id="soundToggle" aria-label="Alternar som" title="Alternar som">♫</button><button type="button" id="textToggle" aria-label="Mostrar diálogo instantaneamente" title="Pular animação">⚡</button></div></div>
+<?php if($video):?><video id="sceneVideo" class="scene-video" playsinline loop muted autoplay><source src="<?=h($video)?>" type="video/mp4"></video><?php endif;?>
+<?php if($portrait):?><img class="scene-portrait" src="<?=h($portrait)?>" alt="<?=h($displayName)?>"><?php endif;?>
+<div class="game-bottom"><div class="story-panel"><div class="speaker"><span class="speaker-dot"></span><?=h($displayName)?></div><p id="storyText" class="story-text" data-text="<?=h($replace($scene['texto']))?>"></p><span class="continue-hint">▼ <?= $lang===2?'CHOOSE YOUR PATH':'ESCOLHA SEU CAMINHO' ?></span></div><div class="choice-panel"><div class="choice-head"><?= $lang===2?'WHAT DO YOU DO NEXT?':'QUAL SERÁ SUA PRÓXIMA DECISÃO?' ?></div><?php if($choices):?><?php foreach($choices as $choice):?><a class="choice" href="<?= ((int)$choice['id_destino']===-5 && $sceneId===-5)?'../menu.php':'jogo.php?id_destino='.(int)$choice['id_destino'].'&lang='.$lang ?>"><span class="choice-arrow">↗</span><span><?=h($replace($choice['escolha']))?></span></a><?php endforeach;?><?php else:?><p class="muted"><?= $lang===2?'This is the end of this branch.':'Este é o final deste caminho.'?></p><a class="choice" href="../menu.php">↻ <?= $lang===2?'Play again':'Jogar novamente'?></a><?php endif;?></div></div></main>
+<?php if($scene['musica']==='1'):?><audio id="sceneAudio" loop preload="none" src="../img/Lost%20Painting.mp3"></audio><?php endif;?>
+<script src="../JavaScript/game.js" defer></script><script>window.ENIGMA_SCENE={id:<?=json_encode($sceneId)?>,lang:<?=json_encode($lang)?>};</script>
+<?php page_end(); ?>

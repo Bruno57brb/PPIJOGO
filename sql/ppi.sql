@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS `escolhas` (
   PRIMARY KEY (`id_escolha`),
   KEY `fk_historia` (`id_historia`),
   KEY `id_usuario` (`id_usuario`) USING BTREE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Extraindo dados da tabela `escolhas`
@@ -592,7 +592,7 @@ CREATE TABLE IF NOT EXISTS `historia` (
   `video` varchar(255) NOT NULL,
   `animacao` int NOT NULL,
   PRIMARY KEY (`id_historia`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Extraindo dados da tabela `historia`
@@ -1084,12 +1084,12 @@ INSERT INTO `historiaen` (`id_historia`, `texto`, `cenario`, `personagem`, `musi
 DROP TABLE IF EXISTS `usuario`;
 CREATE TABLE IF NOT EXISTS `usuario` (
   `nome` varchar(255) DEFAULT NULL,
-  `imagem` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `imagem` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `id_usuario` int NOT NULL AUTO_INCREMENT,
   `email` varchar(255) NOT NULL,
   `senha` varchar(255) NOT NULL,
   PRIMARY KEY (`id_usuario`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Extraindo dados da tabela `usuario`
@@ -1098,15 +1098,7 @@ CREATE TABLE IF NOT EXISTS `usuario` (
 INSERT INTO `usuario` (`nome`, `imagem`, `id_usuario`, `email`, `senha`) VALUES
 ('André', 'andre.png', -1, '', ''),
 ('Edson', 'edson.png', 0, '', ''),
-('', '', 1, '', ''),
-('Antonio', 'personagem-masc.png', 4, 'mauricioanderlaine.gamerpro@gmail.com', '1234578'),
-('Lorenzo', 'personagem-masc.png', 5, 'lorenzo.2022310934@aluno.iffar.edu.br', '123456789'),
-(NULL, '', 9, 'teste@gmail.com', '123456789'),
-(NULL, '', 10, '123@gmail.com', '12345678'),
-(NULL, '', 11, 'teste1@gmail.com', '123456789'),
-(NULL, '', 12, 'teste2@gmail.com', '123456789'),
-(NULL, '', 13, 'email@gmail.com', '123456789'),
-('Laura', 'personagem-fem.png', 14, 'laura1022@gmail.com', '123456789');
+('Protagonista', 'personagem-masc.png', 1, '', '');
 
 --
 -- Restrições para despejos de tabelas

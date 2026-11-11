@@ -1,30 +1,5 @@
 <?php
-function conectar()
-{
-    require_once "config.php";
-    $conexao = mysqli_connect(
-        $config['host'],
-        $config['user'],
-        $config['pass'],
-        $config['db']
-    );
-
-    if ($conexao === false) {
-        echo "Erro ao conectar á base dados.N° do erro" .
-            mysqli_connect_errno() . "." .
-            mysqli_connect_error();
-        exit;
-    }
-    return $conexao;
-}
-
-
-function executarSQL($conexao, $sql)
-{
-    $result = mysqli_query($conexao, $sql);
-    if ($result === false) {
-        echo "Erro ao executar o comando SQL." .
-            mysqli_errno($conexao) . ":" . mysqli_error($conexao);
-    }
-    return $result;
-}
+require_once __DIR__.'/bootstrap.php';
+function conectar(): mysqli { return db(); }
+function executarSQL(mysqli $conexao,string $sql): mysqli_result|bool {return $conexao->query($sql);}
+$conexao = db();
