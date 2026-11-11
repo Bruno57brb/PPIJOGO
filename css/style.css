@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Mono, monospace;
+}
+
+body {
+  background-image: url('../img/fundo.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.titulo {
+  position: fixed;
+  left: 2%;
+  top: 30%;
+  width: 8em;
+  margin-top: -2.5em;
+  font-size: large;
+  margin: 10px;
+}
+
+h3 {
+  margin-top: 200px;
+  font-style: normal;
+
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+  font-family: Gill Sans, sans-serif;
+  font-style: bold;
+}
+
+.iniciar {
+  position: fixed;
+  right: 80%;
+  top: 27%;
+  width: 8em;
+  margin-top: -2.5em;
+  border: 3px solid #ffffff;
+  padding: 5px 10px 5px 10px;
+  background-color: gray;
+  color: inherit;
+  transition: background .3s;
+  border-radius: 10px;
+  margin-top: 400px;
+  margin-left: 1150px;
+  width: 150px;
+  height: 40px;
+  font-size: larger
+}
+
+.iniciar:hover {
+  background-color: rgb(255, 255, 255);
+  border: 3px solid gray;
+}
+
+a:hover {
+  color: black;
+}
+
+.crud {
+  position: fixed;
+  right: 95%;
+  bottom: 95%;
+  width: 8em;
+  margin-top: -2.5em;
+  border: 3px solid #ffffff;
+  padding: 5px 10px 5px 10px;
+  background-color: gray;
+  color: inherit;
+  transition: background .3s;
+  border-radius: 10px;
+  margin-top: 400px;
+  margin-left: 1150px;
+  width: 80px;
+  height: 40px;
+  font-size: medium
+}
+.autores{
+  color: #fff;
+  font-size: large;
+  position: fixed;
+  top: 60%;
+  right: 5%;
+  line-height: 35px;
+}
+.pt{
+  position: fixed;
+  bottom: 10%;
+  left: 11%;
+}
+.en{
+  position: fixed;
+  bottom: 10%;
+  left: 15%;
+}
+@media only screen and (min-width: 1025px){
+  body {
+    background-image: url('../img/fundo.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  .lang{
+    position: fixed;
+    bottom: 5%;
+    left: 3%;
+  }
+}
