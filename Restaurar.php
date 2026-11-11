@@ -1,1 +1,0 @@
-<?php require_once __DIR__.'/bootstrap.php';page_start('Recuperação de acesso');?><main class="empty-state panel"><h1>Recuperação de senha</h1><p>Esta versão não envia e-mails de recuperação. Solicite a redefinição ao administrador do projeto. Não informe sua senha a ninguém.</p><a class="btn primary" href="index.php">Voltar ao login</a></main><?php page_end(); ?>
